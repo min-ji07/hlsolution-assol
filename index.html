@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
+    <title>assol</title>
+</head>
+<style>
+    a{
+        color: white;
+    }
+    a:hover{
+        color: white;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    }
+    /*버튼속성*/
+    button{
+        border-style: none;
+        background: transparent;
+        text-align: center;
+        height: 30px;
+        cursor:pointer; /*마우스 커서모양*/
+        color: white;
+        width: 310px; height: 44px; 
+    }
+    /* Admin Login */
+    .submit01{
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+    }
+    /* 클릭시 표시 삭제 */
+    button:focus{
+        outline: none;
+    }
+
+    /*입력창 속성*/
+    input{
+        /* background: transparent;  */ /*입력창 투명화*/
+        border-style: none;
+        background-color: #414F5C;
+        text-align: center; /*글씨 가운데정렬*/
+        font-size: 20px;
+        color: white;
+        margin: 0 auto;
+        width: 310px; height: 44px;
+        border-radius: 50px;
+        background:linear-gradient(to bottom, #42505D 0%,  #404E5B 50%, #3C4A55 100%);
+        /*왼쪽 아래 오른쪽 */
+        box-shadow: 3px 2px 4px #192028
+    }
+    /* 클릭시 표시 삭제 */
+    input:focus{
+        outline: none;
+    }
+    input::placeholder{
+        color:rgba(220, 220, 220, 0.774);
+    }
+
+    #div01{
+        /* opacity: 0; */ /*투명*/ 
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 33%; height: 1080px; 
+    }
+    #div02{
+        position: absolute;
+        top: 0;
+        left: 33%;
+        width: 33%; height: 1080px; 
+        text-align: center;
+    }
+    #div03{
+        position: absolute;
+        top: 0;
+        left: 66%;
+        width: 33%; height: 1080px;
+    }
+    #ACE{
+        display: none;
+    }
+
+    
+</style>
+<body>
+    <div class="bodydiv">
+        <div id="img01">
+            <img src="images/loginmain.jpg"> 
+        </div>
+        <div id="div01" style="float: left;">
+        </div>
+
+        
+        <div id="div02">
+            <div class="AceIcon">
+                <!-- 에이스 경영자문 아이콘 div -->
+                <h2 id="ACE">에이스경영자문</h2><img src="images/icon.png" style="margin-top: 310px;">
+                <!-- <input type="text" placeholder="아이콘 / 위치 " style="margin-top: 410px;"> -->
+            </div>
+            <!-- 로그인 -->
+            <div class="AceJoin">
+                <form name="join" action="main2.html" method="POST">
+                    <input type="text" class="userLogin" placeholder="Admin ID" style="margin-top: 70px; "><br>
+                    <input type="password" class="userPass" placeholder="password" style="margin-top: 24px;"><br>
+                    <button type="submit" class="submit01" value="Admin Login" style="margin-top: 23px; border-radius: 50px; 
+                        background:linear-gradient(to right, #BAD8CE 0%, #9AB3DB 36%, #A1A3D3 64%, #907BB4 100%); box-shadow: 3px 2px 4px #192028;">Admin Login</button>
+                </form>
+            </div>
+            <!-- 아이디 찾기 및 -->
+            <div class="userContent" style="margin-top: 12px;">
+                <!-- user 들어가는 id 속성 바꾸기 찾아보기 -->
+                <button id="user IdGo" style="width: 112px; height: 30px; left: 933px;"><a href="userIdSearch.html">아이디찾기</a></button>
+                <button id="user PwGo" style="width: 112px; height: 30px; left: 933px;"><a href="userPassWardSearch.html">비밀번호 찾기</a></button>
+                <button id="user join" style="width: 112px; height: 30px; left: 933px;"><a href="join.html">회원가입</a></button>
+            </div>
+        </div>
+
+
+        </div>
+            <div id="div03">
+            </div>
+        </div>
+    <script>
+    </script>
+</body>
+</html>
