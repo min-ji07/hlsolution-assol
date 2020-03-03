@@ -1,223 +1,186 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../assets/css/default.css">
-    <link rel="stylesheet" href="../assol/images">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta charset="UTF-8"><!--한글깨짐방지-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--모바일기기고려-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--익스플로러고려-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"><!--구글폰트-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script><!--제이쿼리-->
     <title>근무설정</title>
 </head>
 <style>
-    * {margin: 0px; padding: 0px;}
-    body {padding: 0px; margin: 0px; font-family: 'Noto Sans KR'; background-color: #eeeeee;}
-    header{ font-family: 'Nanum Gothic'; font-weight: 500;}
-    h1 { font-size: 22px; margin-bottom: 17px; margin-left: 118px; margin-top: 57px;}
-    p { font-size: 16px; margin-left: 118px; color: #555555;}
-    a { text-decoration: none;}
-    ul li {list-style-type: none;} 
-    .headertop { background: #213745; height: 117px; font-weight: 600; text-align: center; vertical-align: middle;}
-    /*사용자 아이콘*/
-    .headertop img{  width: 78px; height: 78px; position: relative; }
-    .headermenu > ul li {float: left; line-height: 70px;} 
-    .headermenu {
-        background-color: #344755; height: 76px;
-        vertical-align: middle;
-        position: relative;
-    }
-    .headertop h1 { position: absolute; }
-    .logo { background-image: url('../images/logo.png'); background-repeat: no-repeat; margin-left: 815px; margin-top: -40px;}
-    /* 서브메뉴숨기기     */
-    ul[id*="submenu"] { display: none;} 
-    .answer00 { margin-left: 78px;} 
-    .answer00 img {padding-top: 20px;}
-    a[class*="answer"] { 
-        padding: 29px 39px 27px 39px; 
-        font-size: 20px; color: white ;
-        font-weight: 600;
-        }
-    a[class*="answer"] + ul li { clear: both;}
-    /* 검색창 div */
-    .searchdiv { 
-        position: relative; 
-        float: left; 
-        width: 371px; height: 50px; 
-        margin: 20px 0 38px 117px;
-        border-radius: 50px; 
-        font-size: 18px; color: black; 
-        background-color: white;
-        text-align: left;
-    }
-    .searchimg { 
-        position: absolute; margin-right: 10px; margin-top: 13px;
-        background: url('../assol/images/search.png'); background-repeat: no-repeat;
-        width: 18px; height: 20px;
-        color: transparent;
-        }
-    button:focus { outline: 0;}
-    .searchdiv img { width: 18px; height: 20px;}
-    /* 검색창 */ 
-    input, button { border-style: none;}
-    input.search { background-color: transparent; border: none; width: 300px; height: 50px; margin-left: 21px;}
-    input::placeholder { font-size: 17px; color: #b2b7bb;}
-    .search:focus {outline: none;}
-    .userinfo { 
-        float: right; position: relative; 
-        color: #b2b7bb; font-weight:normal; text-align: center; 
-        margin-top: 30px; margin-right: 117px;
-    }
-    .userinfo ul li {float: left; padding: 0 20px;}
-    .userinfo ul li a {color: #fffffd; font-size: 17px;}
-    .name {font-size: 19px;}
-    .photo { border-radius: 50px; box-shadow: 1px 4px 4px #1b2d39;}
-    /*근무표보기 / 근무표설정*/
-    .scheduleView { 
-        background-image: url('../assol/images/scheduleView.png'); background-repeat: no-repeat; 
-        width: 480px; height: 422px; margin-left: 433px; margin-top: 122px; 
-        box-shadow: 1px 4px 4px #d8d8d8; border-radius: 30px;
-    }
-    #scheduleOption h1 { color: #555555;}
-    .scheduleOption { 
-        background-image: url('../assol/images/scheduleOption.png'); background-repeat: no-repeat; 
-        width: 480px; height: 422px; margin-left: 97px; margin-top: 122px; 
-        box-shadow: 1px 4px 4px #d8d8d8;  border-radius: 30px;
-    }
+    @import url("assets/css/schedule.css");
 </style>
+<script>
+    // 메뉴 클릭
+    $(function(){
+        $('.gnb').click(function(){
+            $('.submenu').slideToggle(100)
+        })
+    })
+
+    // 검색 버튼
+    function searchimg(){
+        window.open('search.html', 'window', 'width=800, height=600, status=no, resizable=no, fullscreen=no', top="+(screen.availHeight/2-100)+", left="+(screen.availWidth/2-100)+");
+    }
+
+    // 로그아웃 버튼
+    function logout(){
+        if(confirm("로그아웃 하시겠습니까?")){
+            alert("로그아웃 되었습니다.");
+        }else{
+            alert("취소 되었습니다.")
+        }
+    }
+    
+    function scheduleView(){
+        alert('근무표 보기 페이지로 넘어갑니다.')
+    }
+    function scheduleOption(){
+        alert('근무표 설정 페이지로 넘어갑니다.')
+    }
+
+</script>
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
     <header>
-        <div>
+        <div id="header">
             <div class="headertop">
-                <div class="searchdiv">
-                    <input type="text" maxlength="10" placeholder="검색해주세요." class="search">
-                    <button type="button" class="searchimg" onclick="searchimg();">검색</button>
-                </div>
-                <h1><img src="images/logo.png" class="logo"></h1>
-                <!-- <a href="#" class="logo"><img src="images/logo.png" alt="assol"></a> -->
-                <div class="userinfo">
-                    <div class="namephoto">
-                        <div class="name" style="float: left;">
-                            박이삭님 반갑습니다.
-                            <ul>
-                                <li><a href="#">출퇴근관리</a></li>
-                                <li><a href="#">고객센터</a></li>
-                                <li><a href="#">로그아웃</a></li>
-                            </ul>
-                        </div>
-                        <div class="photo" style="float: right;">
-                            <img src="images/user.png">
+                <div id="headertop_inner">
+                    <h1 class="logo"><a href="#"><img src="images/logo.png" ></a></h1>
+                    <div class="searchdiv">
+                        <input type="text" maxlength="10" placeholder="검색해주세요." class="search"><!-- 입력이 안되야함 옆에 버튼 클릭시 검색한 사원을 불러와 보여줘야함-->
+                        <button type="button" class="searchimg" onclick="searchimg();"><img src="images/search.png"></button>
+                    </div>
+                    
+                    <div class="userinfo">
+                        <div>
+                            <div class="name" style="float: left;">
+                                박이삭님 반갑습니다.
+                                <ul>
+                                    <li><a href="cnfxhlrms.html">출퇴근관리</a></li>
+                                    <li><a href="Q&Aboard.html">고객센터</a></li>
+                                    <li><a href="#" onclick="logout();">로그아웃</a></li>
+                                </ul>
+                            </div>
+                            <div class="photo" style="float: right;">
+                                <img src="images/user.png">
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
             <div class="headermenu">
-                <ul>
-                    <li>
-                        <a href="#" class="answer00"><img src="images/menu.png" alt="메뉴"></a>
-                    </li>
-                    <li>   
-                        <a href="#" class="answer01">사원관리</a> 
-                        <ul id="submenu">
-                            <li><a href="#"><span>서브메뉴1</span></a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer02">근태관리</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer03">급여대장</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">수입지출관리</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">일정관리</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">급여제공</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">본인부담금</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">수급자관리</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="answer04">운영관리</a>
-                        <ul id="submenu">
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴1</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="menu_inner" >
+                    <a href="#" class="menu" ><img src="images/menu.png" alt="메뉴"></a>
+                    <ul class="gnb">
+                        <!-- <li>   
+                            <a href="#" class="answer00" ><img src="images/menu.png" alt="메뉴"></a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li> -->
+                        <li>   
+                            <a href="#" class="answer01" >사원관리</a> 
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer02">근태관리</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer03">급여대장</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">수입지출관리</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">일정관리</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">급여제공</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">본인부담금</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">수급자관리</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="answer04">운영관리</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
     </header>
     <section>
         <div id="scheduleOption">
-            <h1>근무설정</h1>
-            <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
-
-        </div>
-        <div id="schedule">
-            <input type="button" alt="근무표보기" class="scheduleView">
-            <input type="button" alt="근무표설정" class="scheduleOption">
+            <div class="schedule_text">
+                <h1>근무설정</h1>
+                <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
+            </div>
+            <div class="schedule">
+                <button class="scheduleView" onclick="scheduleView();"><img src="images/scheduleView.png" alt="근무표보기"></button>
+                <button class="scheduleOption" onclick="scheduleOption();"><img src="images/scheduleOption.png" alt="근무표설정"></button>
+            </div>
         </div>
     </section>
-    <script>
-        function searchimg(){
-            window.open('search.html', 'window', 'width=800, height=600, status=no, resizable=no, fullscreen=no', top="+(screen.availHeight/2-100)+", left="+(screen.availWidth/2-100)+");
-        }
-    </script>
 </body>
 </html>

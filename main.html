@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" /><!-- 폰트어썸 -->
+    <link rel="stylesheet" href="path/css/font-awesome.min.css">
+</head>
+    <title>메인페이지1</title>
+</head>
+<style>
+    body{
+        background-color: #EEEEEE;
+    }
+    img{
+        width: 100%;
+    }
+    a:hover{
+       color: white;
+   }
+   a:link{
+       color: white; /*방문전*/
+       text-decoration: none;
+   }
+   a:visited{
+       color:white; /*방문 후*/
+   }
+   p{
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        margin-bottom: 3px;
+   }
+   input:focus{
+        outline: none;
+    }
+
+   /* */
+   [class*='box']{
+    opacity: 0.3;
+    position: absolute;
+    border-radius: 26px;
+    float: left;
+    /* border: 1px dashed black; */
+   }
+   .box1{
+        top: 252px;
+        left: 0.5%;
+        width: 611px;
+        height: 558px;
+    }
+    .box2{
+        top: 252px;
+        left: 40.96%;
+        width: 478px;
+        height: 558px;
+    }
+    .box3{
+        top: 252px;
+        left: 68.4%;
+        width: 477px;
+        height: 558px;
+    }
+    .box4{
+        top: 879px;
+        left: 0.5%;
+        width: 1133px;
+        height: 630px;
+    }
+    .box5{
+        top: 879px;
+        left: 68.4%;
+        width: 477px;
+        height: 630px;
+    }
+
+    .sub{
+        flex:1;
+    }
+    .graph{
+        background-color: white;
+        margin-top: -20px;
+        height: 300px;
+    }
+    .title1{
+        text-align: left;
+        height: 30px; 
+        margin-top: 15px;
+        margin-left: 24px; 
+        font-size: 20px; 
+        color: white; 
+        font-weight: 900;
+    }
+    .title2{
+        margin-top: 15px;
+        margin-left: 11px;
+
+    }
+    #header01{
+       /* display: flex; */
+       position: absolute;
+       display: flex;
+       width: 100%;
+       height: 115px;
+   }
+    .header01{
+        flex:1; 
+   }
+   ul{
+       float: left;
+       color: white;
+       padding-left: 0px;
+       margin-top: 0px;
+       margin-left: 8px;
+   }
+
+   /*왜때문에 적용이 안되는데*/
+   [class*="container1"] + div{
+       background-color: blue;
+       border-color: black;
+       float: left;
+   }
+   /* 검색창 겉 div*/
+   .search{
+       /* background: transparent;  */ /*입력창 투명화*/
+        opacity: 0.3;
+        border-style: none;
+        background-color: gray;
+        text-align: left; /*글씨 가운데정렬*/
+        font-size: 15px;
+        color: black;
+        margin: 0 auto;
+        width: 310px; height: 47px;
+        border-radius: 50px;
+   }
+   /* 검색 창 */
+   .search2{
+        margin-left: 20px;
+        margin-top: 7px;
+        color: black;
+        font-size: 20px;
+        font-weight: 400;
+        width: 230px; height: 30px; 
+        border-style: none;
+        background: transparent;
+   }
+   /* 검색창 돋보기 */
+   .searchicon{
+    width: 50px; height: 50px;
+    margin-left: 13px;
+    
+
+
+   }
+
+   .button1{
+        border-style: none;
+        background: transparent;
+        text-align: center;
+        cursor:pointer; /*마우스 커서모양*/
+        width: 90px; height: 30px; 
+        margin-left: 3px;
+        color: white;
+   }
+   button:focus{
+        outline: none;
+    }
+    .icon2{
+        margin-top: 14px; 
+        margin-left: 183px; 
+        width: 65px; 
+        height: auto; 
+        text-align: center;
+    }
+    .icon3{
+        margin-top: -6px; 
+        margin-left: -5px; 
+        width: 185px; 
+        height: auto; 
+        text-align: center;
+    }
+    #ACE{
+        display: none;
+    }
+
+   
+</style>
+<body>
+    <header>
+        <div style="background-color: honeydew; width: 100%; height: 115px; position: absolute; opacity: 0.3;">헤더부분</div>
+            <div id="header01">
+                <div class="header01">
+                    <div class="search" style="margin-left: 115px; margin-top: 31px;">
+                        <input type="text" placeholder="검색해주세요." class="search2">
+                        <span class="searchicon" onclick="search();"><i class="fas fa-search fa-10x;" style="font-size: 20px;"></i></span><!-- 검색 아이콘 / Font Awesome-->
+                    </div>
+                </div>
+                <div class="header01">
+                <img src="images/icon2.png" class="icon2"><h2 id="ACE">에이스경영자문</h2>
+                <img src="images/icon3.png" class="icon3"><h2 id="ACE">에이스경영자문</h2>
+                <!-- <p>에이스 경영자문 빼고 아이콘만 넣고 싶다고 하심</p> -->
+                </div>
+                <div class="header01">
+                    <p style="float: right; margin-right: 265px; margin-top: 30px; font-size: 18px;">ㅇㅇㅇ님 반갑습니다.</p>
+                    <div style="clear: both; margin-left: 105px;">
+                        <ul><button class="button1" style="width: 100px;" ><a href="checkList.html">출퇴근관리</a></button></ul>
+                        <ul><button class="button1"><a href="Q&Aboard.html">고객센터</a></button></ul>
+                        <ul><button class="button1" onclick="logout();"><a href="#">로그아웃</a></button></ul>
+                    </div>
+                    <div class="userimg">
+                        <img src="images/user.png" style="width: 80px; height:auto; margin-top: -42px; margin-left: 7px;">
+                    </div>
+                </div>
+            </div>
+            <!--이미지 지우고 헤더 만들기-->
+        <div id="accordion" style="background-color: green; position:absolute; width: 100%; height: 74.4px; margin-top: 115px; opacity: 0.3;">
+                <p>내용</p>
+            </div>
+            <img src="images/1메인1.jpg">
+        </div>
+    </header>
+    <section>
+        <!-- 두번째 div-->
+        <div class="container1">
+            <div class="box1" style=" background-color: blue; margin-left: 113px; ">
+                <li class="title1" style="height: 30px; margin-top: 15px; margin-left: 24px; font-size: 20px; color: white; font-weight: 900;">개인 스케줄표
+                    <span class="searchicon" onclick="search();" style=" margin-left: 385px; position: absolute;">
+                        <i class="fas fa-search fa-10x;" style="font-size: 25px;"></i>
+                    </span><!-- 검색 아이콘 / Font Awesome-->
+                </li>   
+                <hr>
+                <div style="height: 50px; background-color: white; margin-top: -19px;">
+                    <p>2020.JANUARY</p>
+                </div>
+                <div style="background-color: teal; display: flex; text-align: center; vertical-align: middle; margin-top: -6px;">
+                    <div style="background-color: tomato; width: 180px; height: 195px; margin: auto;">
+                        22
+                    </div>
+                    <div style="background-color: violet; width: 245px;">
+                        23
+                    </div>
+                    <div style="flex:1; background-color: yellowgreen;">
+                        24
+                    </div>
+                </div>
+                <div style="height: 50px; background-color: white; margin-top: -16px;">
+                    <p>THURSDAY</p>
+                </div>
+                <div style="height: 233px; background-color: blanchedalmond; margin-top: -16px;">
+                    <div style="margin: 0 auto; text-align:center; background-color: white; width: 550px; height: 200px; ">
+                        내용 / div안에서 가운데 정렬
+                    </div>
+                </div>
+            </div>
+            <div class="box2" style="background-color: brown;">
+                <li class="title1">예상 급여액
+                    <span class="searchicon" onclick="search();" style=" margin-left: 275px; position: absolute;">
+                        <i class="fas fa-search fa-10x;" style="font-size: 25px;"></i>
+                    </span><!-- 검색 아이콘 / Font Awesome-->
+                </li>
+                <hr>
+                <div class="graph">
+                    <p>그래프</p>
+                </div>
+                <div style="background-color: yellow; height: 32px;">
+                    사 진 넣 어 도 되 나 요
+                </div>
+                <div style="background-color: thistle; height: 47px; margin-top: -16px;">
+                    <div style="background-color: white; margin-left: 27px; width: 425px; height: 47px; border-radius: 10px;"> <!-- 파란색 div -->
+                        <p style="color: black; vertical-align: middle;">전달 대비 34%(값) 상승(값)했습니다 </p>
+                    </div>
+                </div>
+                <div style="background-color: turquoise; height: 40px; margin-top: -16px;">
+                    <p>1월 지급 예상급여액</p>
+                </div>
+                <div>
+                    <p>3,750,500원</p>
+                </div>
+            </div>
+            <div class="box3" style="background-color: cadetblue;">
+                <li class="title1">모든 세입금액
+                    <span class="searchicon" onclick="search();" style=" margin-left: 257px; position: absolute;">
+                        <i class="fas fa-search fa-10x;" style="font-size: 25px;"></i>
+                    </span><!-- 검색 아이콘 / Font Awesome-->
+                </li>
+                <hr>
+                <div class="graph" style="height: 320px;">
+                    <p>그래프</p>
+                </div>
+                <div style="background-color: yellow; height: 62px;">
+                    사 진 넣 어 도 되 나 요
+                </div>
+                <div style="background-color: turquoise; height: 40px; margin-top: -18px;">
+                    <p>예산총액</p>
+                </div>
+                <div>
+                    <p>70,980,000원</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 세번째 div -->
+        <div class="container2">
+            <div class="box4" style="background-color: wheat; margin-left: 113px;">
+                <li class="title1">수급자 명단 및 일정
+                    <span class="searchicon" onclick="search();" style=" margin-left: 860px; position: absolute;">
+                        <i class="fas fa-search fa-10x;" style="font-size: 25px;"></i>
+                    </span><!-- 검색 아이콘 / Font Awesome-->
+                </li>
+                <hr>
+                <div style="margin: 0 auto; background-color: white; width: 1133px; height: 441px; margin-top: -20px;">
+                    <p>내용</p>
+                </div>
+            </div>
+            <div class="box5" style="background-color: pink;">
+                <li class="title2">근태관리
+                    <span class="searchicon" onclick="search();" style=" margin-left: 336px; position: absolute;">
+                        <i class="fas fa-search fa-10x;" style="font-size: 25px;"></i>
+                    </span><!-- 검색 아이콘 / Font Awesome-->
+                </li> <!-- 돋보기 아이콘 받기 / 옆에 이미지 넣기 이미지 클릭 시 검색창 팝업 띄움-->
+                <hr style="margin-top: 14px;">
+                <div>
+                    <div class="" style="background-color: yellow; height: 144px; border-radius: 26px; margin-top: 21px;  display: flex; ">
+                        <div class="sub" style="background-color: red;">
+                            <p>근무</p>
+                            <p style="color: gray; font-size: 100px; font-weight: 900; margin-block-start: -23px;">10</p>
+                        </div>
+                        <div class="sub" style="background-color: blue;">
+                            <p>휴가</p>
+                            <p style="color: rgba(255, 0, 0, 0.555); font-size: 100px; font-weight: 900; margin-block-start: -25px;">3</p>
+                        </div>
+                        <div class="sub" style="background-color: green;">
+                            <p>반차</p>
+                            <p style="color: rgb(240, 199, 63); font-size: 100px; font-weight: 900; margin-block-start: -25px;">2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="background-color: gray; margin-top: 25px; height: 388px; opacity: 0.8; border-radius: 26px;">
+                    <li class="title1" style="margin-bottom: 20px;">근무표일지</li>
+                    <hr style="margin-top: 0px;">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        function logout(){
+            confirm('로그아웃 하시겠습니까?');
+        }
+
+        function search(){
+            var option = ""
+
+            window.open('allsearch.html', '검색', 'option');
+        }
+       
+
+        
+    </script>
+    <!-- <footer style="height: 150px;">
+        <p>푸터 영역 만들어야 밑에 어색하지않음</p>
+    </footer> -->
+    
+</body>
+</html>

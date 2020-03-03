@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"><!--한글깨짐방지-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--모바일기기고려-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--익스플로러고려-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> -->
+    <!--구글폰트-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script><!--제이쿼리-->
+    <title>근무조설정</title>
+</head>
+<style>
+    @import url("assets/css/workTeam.css");
+</style>
+<body>
+    <script>
+        // 검색 버튼
+    function search1(){
+        window.open('search.html', 'window', 'width=800, height=600, status=no, resizable=no, fullscreen=no', top="+(screen.availHeight/2-100)+", left="+(screen.availWidth/2-100)+");
+    }
+    function back(){
+        alert('이전으로')
+    }
+    function next(){
+        alert('다음으로')
+    }
+    </script>
+    <div class="workTeam">
+        <div class="title">
+            <h1>근무설정</h1>
+            <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
+        </div>
+        <div class="worktable"><!-- 흰색 div-->
+            <div class="workTeamOption">
+                <div class="Option_inner">
+                    <h1>근무조 설정</h1>
+                    <p>WORKING GROUP SETTINGS</p>
+                </div>
+                <div class="num01">
+                    <div class="teamOption">
+                        <p>근무조설정</p>
+                    </div>
+                    <div class="plus">
+                        <button type="button" class="insert" onclick="insert();">추가</button>
+                        <button type="button" class="delete1" onclick="delete1();">수정</button>
+                    </div>
+                    <div style="float: right;">
+                        <button type="button" class="search1" onclick="search1();">수급자 현황보기 <img src="images/search1.png"></button>
+                    </div>
+                </div>
+                
+                <div class="table"> 
+                    표 들어갈 자리
+                </div>
+                <div class="backnext">
+                    <button type="button" class="back" onclick="back();" style="background: #bfbfbf; margin-right: 8px;">이전으로</button>
+                    <button type="button" class="next" onclick="next();" style="background: #87c395;">다음으로</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+ <!-- <table>
+                        <caction>테이블 제목(근무조 설정) 이렇게 해야되는지 아니면 h1로 나눠서 해야되는지</caction>
+                        <thead>
+                            <tr>
+                                <th>근무일</th>
+                                <th>근무형태</th>
+                                <th>근무팀명</th>
+                                <th>최소인원수</th>
+                                <th>근무시작시간 ~ 근무종료시간</th>
+                                <th>휴식시간</th>
+                                <th>종합</th>
+                                <th>현재근무시간</th>
+                                <th>연장근무시간</th>
+                                <th>권장근무시간</th>
+                                <th>검토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>월-토 </th>
+                                <th>정규직</th>
+                                <th>a조</th>
+                                <th>05</th>
+                                <th>08:00-18:00</th>
+                                <th>120분</th>
+                                <th>8시간</th>
+                                <th>8시간</th>
+                                <th>0분</th>
+                                <th>8시간</th>
+                                <th>ㅇ</th>
+                            </tr>
+                        </tbody>
+                    </table> -->

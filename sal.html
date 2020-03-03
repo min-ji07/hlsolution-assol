@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"><!--한글깨짐방지-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--모바일기기고려-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--익스플로러고려-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> -->
+    <!--구글폰트-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script><!--제이쿼리-->
+    <title>급여대장</title>
+</head>
+<style>
+    @import url("assets/css/sal.css");
+</style>
+<body>
+    <script>
+    // 검색 버튼
+    function searchimg(){
+        window.open('search.html', 'window', 'width=800, height=600, status=no, resizable=no, fullscreen=no', top="+(screen.availHeight/2-100)+", left="+(screen.availWidth/2-100)+");
+    }
+    </script>
+
+    <section id="salSection">
+        <div class="leftContainer">
+            <h1>급여대장</h1>
+            <p>월별, 사원별 급여 및 상여금 정보를 입력, 저장, 관리 할 수 있습니다. <span>* 귀속연월, 급여차수를 확인해주세요.</span></span></p>
+
+            <div class="text1 "><!--정산기간-->
+                정산기간 2020.01.01 ~ 2020.01.31 급여지급일 2020.01.31
+            </div>
+            <div class="text2"><!-- 귀속 월 -->
+                <p>귀속연월 2020 12  급수차수 급여-01차</p>
+            </div>
+            <div class="text3"><!--급여불러오기 -->
+                <div class="salLoad">
+                    지난급여불러오기 clear : both; 신규추가 
+                </div>
+                <div>
+                    선택삭제  float : right
+                </div>
+                내용 table
+            </div>
+            <div class="result">
+                <div class="result1">
+                    <div class="gray">
+                        <div>월합계</div>
+                        <div>45 건</div>
+                    </div>
+                    <div class="blue">
+                        <div>지급총액</div>
+                        <div>112,304,400 원</div>
+                    </div>
+
+                </div>
+                <div class="result2">
+                    <div class="pink">
+                        <div>공제총액</div>
+                        <div>24,304,400 원</div>
+                    </div>
+                    <div class="green">
+                        <div>실지급액</div>
+                        <div>97,304,400 원</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="rightContainer">
+            <!--탭 버튼1-->
+            <div class="tap01">
+                <h6>일반소득</h6>
+            </div>
+            <div class="searchbox">
+                <input type="search" class="inputsearch" placeholder="사원 검색">
+                <button type="button" onclick="searchimg();" class="search"><img src="images/search.png"></button>
+                <fieldset>
+                    <legend>지급항목</legend>
+                    <ul>
+                        <li>
+                            <label for="rlqhsrmq">기본급</label>
+                            <input type="text" id="rlqhsrmq">
+                        </li>
+                        <li>
+                            <label for="tlreoql">식대비</label>
+                            <input type="text" id="tlreoql">
+                        </li>
+                        <li>
+                            <label for="rmsthrwkdfurma">근속장려금</label>
+                            <input type="text" id="rmsthrwkdfurma">
+                        </li>
+                        <li>
+                            <label for="tjdrhkrmq">성과급</label>
+                            <input type="text" id="tjdrhkrmq">
+                        </li>
+                        <li>
+                            <label for="dirkstnekd">야간수당</label>
+                            <input type="text" id="dirkstnekd">
+                        </li>
+                        <li>
+                            <label for="dirkstnekd">야간수당</label>
+                            <input type="text" id="dirkstnekd">
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+
+            <!--탭 버튼2-->
+            <div class="tap02 hidden">
+                <h6>사업소득 / 기타소득</h6>
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+
+        
+    </section>
+</body>
+</html>

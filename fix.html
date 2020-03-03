@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"><!--한글깨짐방지-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--모바일기기고려-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--익스플로러고려-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <title>헤더 푸터 고정</title>
+</head>
+
+<body>
+    <div id="header">헤더</div>
+    <div id="navbar">
+        <ul class="nav">
+             <li><a href="#">munu1</a></li>
+             <li><a href="#">menu2</a></li>
+             <li><a href="#">menu3</a></li>
+         </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#header").load("schedule.html #header")
+          /* id 지정을 통해서도 가능합니다. 
+           $("#header").load("header.html #navbar")
+           */       
+        });
+    </script> 
+</body>
+
+</html>
+
+
+
+
+
+
+
+   
