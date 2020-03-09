@@ -25,6 +25,9 @@
         alert('다음으로')
     }
     </script>
+
+    <!-- 헤더 -->
+
     <div class="workTeam">
         <div class="title">
             <h1>근무설정</h1>
@@ -42,10 +45,10 @@
                     </div>
                     <div class="plus">
                         <button type="button" class="insert" onclick="insert();">추가</button>
-                        <button type="button" class="delete1" onclick="delete1();">수정</button>
+                        <button type="button" class="delete1" onclick="delete1();">삭제</button>
                     </div>
-                    <div style="float: right;">
-                        <button type="button" class="search1" onclick="search1();">수급자 현황보기 <img src="images/search1.png"></button>
+                    <div class="view">
+                        <button type="button" class="search1" onclick="search1();">수급자 현황보기 <img src="images/search1.png" /></button>
                     </div>
                 </div>
                 
@@ -53,8 +56,8 @@
                     표 들어갈 자리
                 </div>
                 <div class="backnext">
-                    <button type="button" class="back" onclick="back();" style="background: #bfbfbf; margin-right: 8px;">이전으로</button>
-                    <button type="button" class="next" onclick="next();" style="background: #87c395;">다음으로</button>
+                    <button type="button" class="back" onclick="back();">이전으로</button>
+                    <button type="button" class="next" onclick="next();">다음으로</button>
                 </div>
             </div>
         </div>
