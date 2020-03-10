@@ -1,0 +1,95 @@
+@import url("default.css");
+@import url("../../images");
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body{ background-color: #eeeeee; width:1686px; height: 969px; margin:0 auto;}
+.workTeam { position: relative; top: 253px;}
+.title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
+.title p { font-size: 19px; color: #555555; padding-bottom: 27px;}
+.worktable { background: white; width: 1689px; height: 597px; top: 62px; text-align: center; border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8;}
+.workTeamOption { display: inline-block; width : 1610px; height: 597px;} 
+.Option_inner {margin-top: 26px;}
+.Option_inner h1 { font-size: 24px; color: #555555;}
+.Option_inner p { font-size: 16px; color: #797979;}
+
+/*근무조설정버튼*/
+.teamOption {float: left;}
+.teamOption p { font-size: 18px; color: #797979;}
+/* 추가 / 삭제 */
+.plus { float: left; line-height: 50%; margin-left: 10px; margin-top: 5px; }
+.plus button { background-color: #bdbdbd; width: 68px; height: 22px; border-radius: 50px; color: white; font-size: 16px; line-height: 50%; margin-right: 6px;}
+/* 수급자 현황보기 */
+.search1 { background-color: #aaaaaa; width: 189px; height: 27px; border-radius: 30px; color: white; font-size: 18px;}
+
+
+/*년수입력*/
+input[type="text"]{width: 67px; height: 21px; border: 1px solid #aaaaaa; border-radius: 0px;}
+select {width: 41px; height: 21px; border: 1px solid #aaaaaa; border-radius: 0px; }
+.year {text-align: left;}
+.year_inner{ font-size: 18px; color: #797979;}
+/* 아래 버튼 */
+.backnext { position: absolute; bottom: 17px; right: 48px; float: right;}
+.back, .next {  width: 118px; height: 27px; border-radius: 30px; font-size: 19.5px; color: white; } 
+.back { background: #bfbfbf; margin-right: 12px; line-height: 50%;}
+.next { background: #87c395; line-height: 50%;} 
+.view { float: right; }
+
+
+
+/* 사원근무 설정*/
+.emTable { background: white; width: 1689px; height: 597px; top: 62px; border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8;}
+.option {float: left; width: 150px; height: 20px ;} /* 사원근무설정 옆에 버튼 붙이기*/
+.option p {width: 193px; font-size: 19px; color: #797979; margin-left: 39px; margin-top: 31px;}
+.buttonset { float: left; line-height: 50%;  margin-top: 34px; margin-left: 11px;}
+.buttonset button { background-color: #bdbdbd; width: 68px; height: 22px; border-radius: 50px; color: white; font-size: 16px; line-height: 50%; margin-right: 6px;}
+
+.leftDiv { float: left; width: 1114px; height: 595px;}
+
+.border01 { position: relative; float: left;
+    width: 1043px; height: 494px; left: 35px; top:19px;
+}
+
+.rightDiv {
+    float: right; margin: 0 auto;
+    width: 574px; height: 595px;
+    position: relative;
+
+}
+.rightDiv p { position: absolute;
+    font-size: 19px; color: #797979; top: 31px; } /*margin-top:31px*/
+.border02 {text-align: center; }/*overflow: scroll; overflow-x: hidden;*/
+/* 표 들어갈 div */
+.table { position : absolute; width: 1043px; height: 494px; border: 1px solid #d3d3d3;}
+.table2 { position: absolute; overflow: scroll; overflow-x: hidden; text-align: center; 
+    width: 537px; height: 419px; top: 100px;
+    border: 1px solid #d3d3d3; border-top: none; border-right: none;}
+/* 스크롤 커스텀 */
+.table2::-webkit-scrollbar {background: #e9e9e9; width: 9px; height: 363px;}
+.table2::-webkit-scrollbar-track {background: #a2a2a2; width: 9px; height: 63px; border-radius: 50px;}
+.table2::-webkit-scrollbar-track-piece {background: #e9e9e9; width: 9px; height: 300px;}
+
+
+
+.NUM { width: 501px; height: 74px; border-radius: 15px; color: white; font-size: 23px; margin: 7px 0 10px 18px; display: flex;}
+.NUM.A { margin-top: 15px;}
+
+.NUM0 { position: absolute; z-index: 10;
+    background-color: #f5f3f4; width: 538px; height: 30px; border-radius: 15px; color: #535353; font-size: 15px; display: flex;
+    top: 71px;
+}
+.NUM0 div {flex:1; padding: 8px 46px; width: 501px; height: 30px; transform:translateY(-10%)}
+.NUM div {flex: 1; padding: 24px 49px; transform:translateY(-5%)}
+.NUM div::after { content: ""; position: absolute; width: 3px; height: 53px; background:rgb(255, 255, 255, 0.39); left: 166px; transform:translateY(-20%)}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ content 뒤에꺼 삭제 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.NUM:last-child(div) {content: none;}
+
+.A {background-color: #da9898;}
+.B {background-color: #98daa5;}
+.C {background-color: #a5cfdd;}
+.D {background-color: #a5addd;}
+.E {background-color: #d0a5dd;}
+.F {background-color: #7c7878;}
+.G {background-color: #4d4d4d;}
+.H {background-color: #dad1d1;}
+
+
