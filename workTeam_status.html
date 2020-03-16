@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>사원별 연차관리 현황</title>
+</head>
+<style>
+    @import url("assets/css/workTeam_status.css");
+</style>
+<body>
+    <div class="workTeam_status">
+        <div class="workTeam">
+            <div class="title">
+                <h1>근무설정</h1>
+                <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
+            </div>
+
+            <div class="table_inner">
+
+                <input type="radio" id="tab_01" name="tab" checked/>
+                <label for="tab_01">근무표</label>
+                <input type="radio" id="tab_02" name="tab" />
+                <label for="tab_02">연차관리현황</label>
+                <div class="worktable">
+                    <div class="workTeamOption">
+
+                        <div class="tabbox con1">
+                            근무표 란
+
+                        </div>
+
+
+                        <div class="tabbox con2">
+                            <div class="Option_inner">
+                                <h1>사원별 연차관리 현황</h1>
+                                <p>ANNUAL LEAVE MANAGEMENT</p>
+                            </div>
+                            <div class="leftDiv">
+                                <div class="year_inner">
+                                    <p>해당년도 
+                                    <select size="1" class="year">
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                    </select>
+                                    <select size="1" class="month">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select> 월</p>
+                                </div>
+                                <div class="annual">
+                                    <div class="table_title">
+                                        <div>이름</div>
+                                        <div>부서</div>
+                                        <div>직책</div>
+                                        <div>입사일</div>
+                                        <div>연차적용기간</div>
+                                        <div>연간 연차수</div>
+                                        <div>추가일수</div>
+                                        <div>공제일수</div>
+                                        <div class="color_blue">사용일수</div>
+                                        <div class="color_red">잔여일수</div>
+                                    </div>
+                                    <table class="table_content">
+                                        <tbody>
+                                            <tr>
+                                                <td>박이삭</td>
+                                                <td>마케팅팀</td>
+                                                <td>사원</td>
+                                                <td>19.01.02</td>
+                                                <td>2019301.02~2019.02.02</td>
+                                                <td>12</td>
+                                                <td>ㅇ</td>
+                                                <td>ㅇ</td>
+                                                <td class="color_blue">10</td>
+                                                <td class="color_red">4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="rightDiv">
+                                <div class="tkdydgusghkd">
+                                    <input type="text" placeholder="사원검색" class="search" />
+                                </div>
+                            </div>
+
+                            <div class="table"> 
+                                
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8"><!--한글깨짐방지-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--모바일기기고려-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--익스플로러고려-->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> -->
-    <!--구글폰트-->
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script><!--제이쿼리-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>  
     <title>근무조설정</title>
 </head>
 <style>
@@ -14,91 +15,90 @@
 </style>
 <body>
     <script>
-        // 검색 버튼
-    function search1(){
-        window.open('search.html', 'window', 'width=800, height=600, status=no, resizable=no, fullscreen=no', top="+(screen.availHeight/2-100)+", left="+(screen.availWidth/2-100)+");
-    }
     function back(){
         alert('이전으로')
     }
-    function next(){
-        alert('다음으로')
+    function modal(){
+        $('.modal').show();
     }
+    function close_modal(){
+        $('.modal').hide;
+    }
+    // $(function() {
+    //     $( "#testDatepicker" ).datepicker({
+    //     });
+    // });
+    
+    $(function () {
+        $('#testDatepicker').datetimepicker({
+            viewMode: 'years',
+            format: 'MM/YYYY'
+        });
+    });
     </script>
-
-    <!-- 헤더 -->
-
     <div class="workTeam">
         <div class="title">
             <h1>근무설정</h1>
             <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
         </div>
-        <div class="worktable"><!-- 흰색 div-->
+        <div class="worktable">
             <div class="workTeamOption">
                 <div class="Option_inner">
                     <h1>근무조 설정</h1>
                     <p>WORKING GROUP SETTINGS</p>
                 </div>
                 <div class="num01">
-                    <div class="teamOption">
-                        <p>근무조설정</p>
+                    <p class="year_inner">근속년도 <input type="text" id="testDatepicker"> 년 
+                    <select size="1" class="month">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select> 월</p>
+                    <div class="left">
+                        <div class="teamOption">
+                            <p>근무조설정</p>
+                        </div>
+                        <div class="plus">
+                            <button type="button" class="insert" onclick="insert();">추가</button>
+                            <button type="button" class="delete1" onclick="delete1();">삭제</button>
+                            <button type="button" class="save" onclick="delete1();">저장</button>
+                        </div>
                     </div>
-                    <div class="plus">
-                        <button type="button" class="insert" onclick="insert();">추가</button>
-                        <button type="button" class="delete1" onclick="delete1();">삭제</button>
-                    </div>
-                    <div class="view">
-                        <button type="button" class="search1" onclick="search1();">수급자 현황보기 <img src="images/search1.png" /></button>
+                    <div class="right">
+                        <button type="button" class="search1" onclick="modal();">수급자 현황보기 <img src="images/search1.png" /></button>
                     </div>
                 </div>
-                
                 <div class="table"> 
                     표 들어갈 자리
                 </div>
                 <div class="backnext">
                     <button type="button" class="back" onclick="back();">이전으로</button>
-                    <button type="button" class="next" onclick="next();">다음으로</button>
+                    <button type="button" class="next" onclick="next();"><a href="employee.html">다음으로</a></button>
                 </div>
             </div>
         </div>
-
     </div>
+    <div class="modal">
+        <div class="modal_top">
+            <div class="left">팝업창 수정하기</div>
+            <div class="close_modal"><a href="" onclick="close_modal();">X</a></div>
+        </div>
+        <div class="modal_bottom">
+            <img src="images/modal_img.jpg" alt="근무표 설정 후 근무표 보기를 선택해 주세요.">
+            <p>근무표 설정 후 근무표 보기를 선택해 주세요.</p>
+            <button type="button" onclick="scheduleOption();">근무표 설정하기</button>
+        </div>
+        <div class="modal_layer"></div>
+    </div>
+
 </body>
 </html>
-
-
-
-
- <!-- <table>
-                        <caction>테이블 제목(근무조 설정) 이렇게 해야되는지 아니면 h1로 나눠서 해야되는지</caction>
-                        <thead>
-                            <tr>
-                                <th>근무일</th>
-                                <th>근무형태</th>
-                                <th>근무팀명</th>
-                                <th>최소인원수</th>
-                                <th>근무시작시간 ~ 근무종료시간</th>
-                                <th>휴식시간</th>
-                                <th>종합</th>
-                                <th>현재근무시간</th>
-                                <th>연장근무시간</th>
-                                <th>권장근무시간</th>
-                                <th>검토</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>월-토 </th>
-                                <th>정규직</th>
-                                <th>a조</th>
-                                <th>05</th>
-                                <th>08:00-18:00</th>
-                                <th>120분</th>
-                                <th>8시간</th>
-                                <th>8시간</th>
-                                <th>0분</th>
-                                <th>8시간</th>
-                                <th>ㅇ</th>
-                            </tr>
-                        </tbody>
-                    </table> -->
