@@ -1,6 +1,6 @@
 @import url("default.css");
 @import url("../../images");
-
+body {background-color: #eeeeee;}
 .wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
 .work_setting_04 .title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
 .work_setting_04 .title p { font-size: 19px; color: #555555; padding-bottom: 14px;}
