@@ -2,8 +2,6 @@
 @import url("../../images");
 body {background-color: #eeeeee;}
 .wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
-.work_setting_04 .title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
-.work_setting_04 .title p { font-size: 19px; color: #555555; padding-bottom: 14px;}
 .work_setting_04 .table_inner { float: left; position: absolute; }
 .work_setting_04 .worktable { background: white; width: 1686px; height: 569px; border-radius: 0 20px 20px 20px; box-shadow: 0px 6px 5px #d8d8d8; }
 .work_setting_04 .workTeam_option { position: relative; width : 1641px; height: 569px; margin: 0 auto; } 
@@ -17,23 +15,427 @@ body {background-color: #eeeeee;}
 .work_setting_04 input[type="radio"] + label { 
     display: inline-block; text-align: center;
     background: #a2abb1; color: white;
+    width: 184px; height: 38px; line-height: 38px; font-size: 15px;
+    border-radius: 15px 15px 0 0;
+    cursor:pointer;
+}
+
+.work_setting_04 .title{
+    margin-bottom:15px;
+}
+.work_setting_04 .title h3{
+    font-size:22px;
+}
+.work_setting_04 .title p{
+    font-size:16px;
+}
+
+/* 탭 */
+input[type="radio"] { display: none;}
+input[type="radio"] + label { 
+    display: inline-block; text-align: center;
+    background: #a2abb1; color: white;
     width: 184px; height: 38px; line-height: 38px; font-size: 13px;
     border-radius: 15px 15px 0 0;
 }
-.work_setting_04 .tabbox { position: absolute; width : 1641px; height: 569px; margin: 0 auto; }
-.work_setting_04 input[type="radio"]:checked + label { background: white; color: #555555;}
-.work_setting_04 input[id="tab_01"]:checked ~ .con1 {display: block;}
-.work_setting_04 input[id="tab_02"]:checked ~ .con2 {display: block;}
-.work_setting_04 .year_inner {position: absolute; top: 80px;}
-.work_setting_04 .year_inner select { border:none; border-bottom: 1px solid #9c9c9c; color: #7a7a7a; border-radius: 0px; }
-.work_setting_04 .month { margin-left: 15px;}
+.tabbox { position: absolute; width : 1641px; height: 569px; margin: 0 auto; }
+/* 체크 된 탭*/
+input[type="radio"]:checked + label { background: white; color: #555555;}
+input[id="tab_01"]:checked ~ .worktable > .workTeam_option > .work_chart{display: block;}
+input[id="tab_02"]:checked ~ .worktable > .workTeam_option > .annual_box{display: block;} /* 왜 안나옴?*/
 
-.work_setting_04 .annual { position: absolute; top: 119px;}
-.work_setting_04 .table_title { width: 991px; height: 31px; border-radius: 30px; }
-.work_setting_04 .annual div { float: left; height: 31px; line-height: 31px; background: #f5f3f3;  font-size: 16px; color: #818080; padding: 0 17px;}
-.work_setting_04 .annual .color_red { font-size: 16px; color: #d97a7a;}
-.work_setting_04 .annual .color_blue { font-size: 16px; color: #6472c8;}
-.work_setting_04 tbody {position: absolute; top: 42px;}
-.work_setting_04 td { border: 1px dotted #cecece; border-top: none;}
-.work_setting_04 .search { width: 604px; height: 440px; }
-.work_setting_04 input[type="text"] { position: absolute; width: 253px; height: 25px; top: 52px; left: 305px;}
+/* 삭제해야됨 */
+.a {background-color: #da9898;}
+.b {background-color: #98daa5;}
+.c {background-color: #a5cfdd;}
+.d {background-color: #a5addd;}
+.e {background-color: #d0a5dd;}
+.f {background-color: #7c7878;}
+.g {background-color: #4d4d4d;}
+.h {background-color: #dad1d1;}
+
+/* 근무표 */
+.work_chart{
+    display:none;
+}
+.work_chart .table_box{
+    width:100%;
+    height:395px;
+}
+.work_chart .select_month{
+    width:150px;
+    overflow: hidden;
+    margin:auto;
+    padding:0 15px;
+    position: relative;
+    padding-top:20px;
+}
+.work_chart .select_month .month_txt{
+    text-align: center;
+}
+.work_chart .select_month .month_txt{
+    font-size: 20px;
+}
+.work_chart .select_month .month_txt.en{
+    font-size:14px; color: #bbb;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.work_chart .select_month button{
+    display:block;
+    width:20px;
+    height:20px;
+    position: absolute;
+    top:50%;
+    left:0;
+    background:url("../../images/btn_left.png") no-repeat center;
+    cursor: pointer;
+}
+.work_chart .select_month button.btn_right{
+    left:unset;
+    right:0;
+    background:url("../../images/btn_right.png") no-repeat center;
+}
+.work_chart .top_box{
+    width:100%;
+    height:40px;
+    line-height:40px;
+}
+.work_chart .team_color{
+    box-sizing: border-box;
+    padding-left:10%;
+    float:left;
+    font-size:16px;
+}
+.work_chart .team_color li{
+    display:inline-block;
+    margin-right:20px;
+}
+.work_chart .team_color .color_box{
+    display:inline-block;
+    width:23px;
+    height:7px;
+    border-radius:20px;
+    margin-right:8px;
+    vertical-align: middle;
+    margin-bottom:3px;
+}
+
+.work_chart .work_name{
+    width:10%;
+    float:left;
+}
+.work_chart .work_name li:first-child{
+    font-size:20px;
+    margin-bottom:15px;
+    height:50px;
+    line-height:50px;
+}
+.work_chart .work_calendar{
+    width:90%;
+    float:left;
+}
+.work_chart .work_calendar .work_date{
+    background-color: #f5f3f3;
+    border-radius: 30px;
+}
+.work_chart .work_calendar .work_date > div{
+    width:50px;
+    height:40px;
+    text-align: center;;
+    float:left;
+}
+.work_chart .btn_desc{
+    display:block;
+    float:right;
+    font-size:20px;
+    background-color: transparent;
+    cursor: pointer;
+    padding-right:35px;
+    position:relative;
+    margin-right:20px;
+}
+.work_chart .btn_desc:after{
+    display:inline-block;
+    content: "";
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background:url("../../images/icon_plus.png") no-repeat center;
+    background-size:14px;
+    background-color: #868686;
+    position:absolute;
+    top:3px;
+    right:0;
+}
+
+.work_chart .scroll_box {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 415px;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    border-right: none;
+    margin-top:5px;
+}
+.work_chart .scroll_box:after{
+    content:"";
+    display:block;
+    width:100%;
+    height:50px;
+    background-color:red;
+}
+.work_chart .scroll_box::-webkit-scrollbar {
+    background: #e9e9e9;
+    width: 9px;
+    height: 363px;
+    border-radius: 50px;
+}
+.work_chart .scroll_box::-webkit-scrollbar-thumb {
+    background: #a2a2a2;
+    width: 9px;
+    height: 63px;
+    border-radius: 50px;
+}
+.work_chart .scroll_box::-webkit-scrollbar-track {
+    background: #e9e9e9;
+    width: 9px;
+    height: 300px;
+}
+
+.work_chart .btn_box{
+    margin-top:10px;
+    text-align: right;
+}
+.work_chart .btn_box button{
+    font-size:18px;
+    border-radius: 20px;
+    padding:0 25px;
+    margin-left:10px;
+    color:white;
+    background-color:#a8a8a8;
+    padding-bottom:1px;
+}
+.work_chart .btn_box button.btn_excel{
+    padding-left:45px;
+    padding-right:10px;
+    background:url("../../images/icon_excel.png") no-repeat 15px center;
+    background-size:22px;
+    background-color:#4e926f;
+}
+.work_chart .btn_box button.btn_pdf{
+    padding-left:45px;
+    padding-right:10px;
+    background:url("../../images/icon_pdf.png") no-repeat 15px center;
+    background-size:22px;
+    background-color:#ec6b6b;
+}
+
+/* 연차관리 */
+.annual_title{
+    width:100%;
+    height:60px;
+    text-align:center;
+    margin-top:20px;
+}
+.annual_title h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+.annual_title p{
+    font-size:15px;
+    color:#959595;
+}
+.annual_box{
+    width:100%;
+    overflow:hidden;
+    display:none;
+}
+.annual_box .left_box{
+    width:61%;
+    margin-right:2%;
+    height:465px;
+    float:left;
+    /* border:1px solid #ccc; */
+    box-sizing: border-box;
+}
+.annual_box .left_box .date_box{
+    width:100%;
+    height:35px;
+    line-height:35px;
+    margin-bottom:10px;
+}
+.annual_box .left_box .table_box{
+    width:100%;
+    height:420px;
+}
+.annual_box .right_box{
+    width:37%;
+    height:465px;
+    float:left;
+    /* border:1px solid #ccc; */
+    box-sizing: border-box;
+    position:relative;
+}
+.annual_box .search_box{
+    position: absolute;
+    top:52px;
+    right:25px;
+}
+.annual_box .search_box input{
+    width: 271px;
+    height: 25px;
+    border:0 none;
+    border-bottom:1px solid #808080;
+    border-radius: 0px;
+    text-indent: 5px;
+    font-size:18px;
+    padding-bottom:3px;
+}
+.annual_box .search_box input::placeholder{
+    font-size:18px;
+    color:#555;
+}
+.annual_box .search_box button{
+    width:20px;
+    height:20px;
+    background:url("../../images/btn_search.png") no-repeat center;
+    position: absolute;
+    right:0;
+}
+.annual_box .scroll_box {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 419px;
+    border-top: none;
+    border-right: none;
+    position: relative;
+}
+.annual_box .scroll_box::-webkit-scrollbar {
+    background: #e9e9e9;
+    width: 9px;
+    height: 363px;
+    border-radius: 50px;
+}
+.annual_box .scroll_box::-webkit-scrollbar-thumb {
+    background: #a2a2a2;
+    width: 9px;
+    height: 63px;
+    border-radius: 50px;
+}
+.annual_box .scroll_box::-webkit-scrollbar-track {
+    background: #e9e9e9;
+    width: 9px;
+    height: 300px;
+}
+
+.annual_box .bg_border_bottom{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    width: 95.5%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.annual_box .month_title_bg{
+    display:inline-block;
+    padding:8px 15px;
+    font-size:18px;
+    color:white;
+    background-color:#a7d5e4;
+    border-radius: 18px 18px 0 0;
+}
+.annual_box .month_title_bg span{
+    padding-bottom:5px;
+    border-bottom:1px solid white;
+}
+
+.annual_box .month_head{
+    width:97%;
+    margin-right:3%;
+    height:30px;
+    line-height:30px;
+    background-color:#a7d5e4;
+    color:white;
+    text-align:center;
+    font-size:15px;
+    border-radius: 0 18px 18px 18px;
+    margin-bottom:8px;
+}
+.annual_box .month_head li{
+    width:8.3%;
+    float:left;
+    
+}
+.annual_box .month_head li:last-child{
+    width:8.4%;
+}
+.annual_box .month_chart{
+    width:97%;
+    overflow:hidden;
+}
+.annual_box .month_chart li{
+    text-align: center;
+    height:40px;
+    line-height:40px;
+    border:1px solid #ccc;
+    border-left:0px none;
+    border-top:0px none;
+}
+.annual_box .month_chart li p{
+    display:inline-block;
+    width:8.3%;
+    height:100%;
+    /* font-size:0;
+    text-indent: -9999px; */
+    float:left;
+    border-left:1px solid #ccc;
+    box-sizing: border-box;
+    font-size:0px;
+}
+.annual_box .month_chart li p:after{
+    display:inline-block;
+    content: "";
+    background-color:#78bfd6;
+    width:26px;
+    height:26px;
+    border-radius: 50%;
+    margin:auto;
+    vertical-align: middle;
+}
+.annual_box .month_chart li p:empty:after{
+    background-color:transparent;
+}
+.annual_box .month_chart li p:last-child{
+    width:8.4%;
+}
+.annual_box .month_chart li p:empty{
+    color:red;
+}
+.annual_box .left_box label {
+    font-size:14px;
+    margin-right:5px;
+}
+.annual_box .left_box label:before{
+    display:inline-block;
+    content: "";
+    width:5px;
+    height:5px;
+    background-color:#7a7a7a;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right:4px;
+}
+.annual_box .left_box select {
+    border:0 none;
+    border-bottom: 1px solid #9c9c9c;
+    color: #7a7a7a;
+    border-radius: 0px;
+    font-size:16px;
+    margin-right:20px;
+    padding-right:5px;
+}

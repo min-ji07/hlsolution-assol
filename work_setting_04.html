@@ -15,38 +15,128 @@
     <div class="wrapper">
         <div class="work_setting_04">
             <div class="title">
-                <h1>근무설정</h1>
+                <h3>근무설정</h3>
                 <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
             </div>
 
             <div class="table_inner">
-
                 <input type="radio" id="tab_01" name="tab" checked/>
-                <label for="tab_01">근무표</label>
-                <input type="radio" id="tab_02" name="tab" />
-                <label for="tab_02">연차관리현황</label>
+                <label for="tab_01">근무표</label><!--
+                --><input type="radio" id="tab_02" name="tab" /><!--
+                --><label for="tab_02">연차관리현황</label>
                 <div class="worktable">
                     <div class="workTeam_option">
-
-                        <div class="tabbox con1">
-                            근무표 란
-
+                        <div class="work_chart">
+                            <div class="select_month">
+                                <button class="btn_left"></button>
+                                <p class="month_txt">2020년 01월</p>
+                                <p class="month_txt en">january</p>
+                                <button class="btn_right"></button>
+                            </div>
+                            <div class="top_box">
+                                <ul class="team_color">
+                                    <li><span class="color_box a"></span>A팀</li>
+                                    <li><span class="color_box b"></span>B팀</li>
+                                    <li><span class="color_box c"></span>C팀</li>
+                                    <li><span class="color_box d"></span>D팀</li>
+                                </ul>
+                                <button class="btn_desc">총근무일 상세</button>
+                            </div>
+                            <div class="table_box">
+                                테이블 영역
+                            </div>
+                            <!-- <div class="scroll_box">
+                                <ul class="work_name">
+                                    <li>에이스경영자문</li>
+                                    <li>박이삭</li>
+                                    <li>박이삭</li>
+                                    <li>박이삭</li>
+                                    <li>박이삭</li> 
+                                    <li>박이삭</li>
+                                    <li>박이삭</li>
+                                    <li>박이삭</li>
+                                    <li>박이삭</li>
+                                </ul>
+                                <div class="work_calendar">
+                                    <div class="work_date">
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                        <div>
+                                            <p>1</p>
+                                            <p>수요일</p>
+                                        </div>
+                                    </div>
+                                    <div class="work_desc">
+                                    </div>
+                                </div>
+                            </div>  -->
+                            <div class="btn_box">
+                                <button>추가휴무일</button> 
+                                <button>추가근무일</button>
+                                <button>연차추가</button>
+                                <button class="btn_excel">엑셀파일다운</button>
+                                <button class="btn_pdf">PDF다운로드</button>
+                            </div>
                         </div>
-
-
-                        <div class="tabbox con2">
-                            <div class="option_inner">
-                                <h1>사원별 연차관리 현황</h1>
+                        <div class="annual_box">
+                            <div class="annual_title">
+                                <h4>사원별 연차관리 현황</h4>
                                 <p>ANNUAL LEAVE MANAGEMENT</p>
                             </div>
-                            <div class="leftDiv">
-                                <div class="year_inner">
-                                    <p>해당년도 
-                                    <select size="1" class="year">
+                            <div class="search_box">
+                                <input type="text" placeholder="사원검색">
+                                <button></button>
+                            </div>
+                            <div class="left_box">
+                                <div class="date_box">
+                                    <label for="select_year">년도</label>
+                                    <select id="select_year">
                                         <option>2020</option>
                                         <option>2021</option>
                                     </select>
-                                    <select size="1" class="month">
+                                    <select id="select_month">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -54,54 +144,225 @@
                                         <option>5</option>
                                         <option>6</option>
                                         <option>7</option>
-                                        <option>8</option>
+                                        <option>8</option> 
                                         <option>9</option>
                                         <option>10</option>
                                         <option>11</option>
                                         <option>12</option>
-                                    </select> 월</p>
+                                    </select>
                                 </div>
-                                <div class="annual">
-                                    <div class="table_title">
-                                        <div>이름</div>
-                                        <div>부서</div>
-                                        <div>직책</div>
-                                        <div>입사일</div>
-                                        <div>연차적용기간</div>
-                                        <div>연간 연차수</div>
-                                        <div>추가일수</div>
-                                        <div>공제일수</div>
-                                        <div class="color_blue">사용일수</div>
-                                        <div class="color_red">잔여일수</div>
-                                    </div>
-                                    <table class="table_content">
-                                        <tbody>
-                                            <tr>
-                                                <td>박이삭</td>
-                                                <td>마케팅팀</td>
-                                                <td>사원</td>
-                                                <td>19.01.02</td>
-                                                <td>2019301.02~2019.02.02</td>
-                                                <td>12</td>
-                                                <td>ㅇ</td>
-                                                <td>ㅇ</td>
-                                                <td class="color_blue">10</td>
-                                                <td class="color_red">4</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="table_box">
+                                    테이블 영역
                                 </div>
                             </div>
-                            <div class="rightDiv">
-                                <div class="search">
-                                    <input type="text" placeholder="사원검색" class="search" />
+                            <div class="right_box"> 
+                                <p class="month_title_bg">
+                                    <span>월별휴가사용현황</span>
+                                </p>
+                                <ul class="month_head">
+                                    <li>1월</li>
+                                    <li>2월</li>
+                                    <li>3월</li>
+                                    <li>4월</li>
+                                    <li>5월</li>
+                                    <li>6월</li>
+                                    <li>7월</li>
+                                    <li>8월</li>
+                                    <li>9월</li>
+                                    <li>10월</li>
+                                    <li>11월</li>
+                                    <li>12월</li>
+                                </ul>
+                                <div class="bg_border_bottom">
+                                </div>
+                                <div class="scroll_box">
+                                    <ul class="month_chart">
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p> 
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p> 
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                        <li>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p></p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <div class="table"> 
-                                
-                            </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
