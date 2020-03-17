@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>사원근무 설정</title>
+</head>
+<style>
+    @import url("assets/css/work_setting_02.css");
+</style>
+<body>
+    <script>
+    function insert(){
+        alert('추가')
+    }
+    function delete1(){
+        alert('삭제')
+    }
+    function save(){
+        alert('저장')
+    }
+    function back(){
+        alert('이전으로')
+    }
+    function next(){
+        alert('다음으로')
+    }
+
+    function modal_popup(){
+        $('.modal').show();
+    }
+    function close_modal(){
+        $('.modal').hide;
+    }
+    
+    </script>
+
+    <div class="workTeam">
+        <div class="title">
+            <h1>근무설정</h1>
+            <p>설정하신 데이터기반으로 근무 현황을 확인 할 수 있습니다.</p>
+        </div>
+        <div class="emTable">
+                <div class="leftDiv">
+                    <div class="">
+                        <div class="option">
+                            <p>사원근무 설정</p>
+                        </div>
+
+                        <div class="buttonset">
+                            <button type="button" class="insert" onclick="modal_popup();">추가</button>
+                            <button type="button" class="delete1" onclick="delete1();">삭제</button>
+                            <button type="button" class="save" onclick="save();">저장</button>
+                        </div>
+                    </div>
+                    <div class="border01">
+                        <div class="table">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightDiv">
+                    <div class="">
+                        <p>근무조별 최소 인원현황</p>
+                    </div>
+
+                    <div class="NUM0">
+                        <div>근무조</div>
+                        <div>필수 인원수</div>
+                        <div>지정 인원수</div>
+                    </div>
+                    <div class="table2">
+                        <div class="border02">
+                            
+                            <div class="NUM A">
+                                <div>A조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM B">
+                                <div>B조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM C">
+                                <div>C조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM D">
+                                <div>D조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM E">
+                                <div>E조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM F">
+                                <div>F조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM G">
+                                <div>G조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                            <div class="NUM H">
+                                <div>H조</div>
+                                <div>5명</div>
+                                <div>1명</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backnext">
+                        <button type="button" class="back" onclick="back();">이전으로</button>
+                        <button type="button" class="next" onclick="next();">다음으로</button>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal">
+        <div class="modal_top">
+            <div class="left">대체근무자 설정</div>
+            <div class="close_modal"><a href="" class="close_modal" onclick="close_modal();"></a>
+        </div>
+        </div>
+        <div class="modal_bottom">
+            <div class="top">
+                <table class="work_table">
+                    <thead>
+                        <tr>
+                            <th>휴무일</th>
+                            <th>휴무일 상세 설정</th>
+                            <th>대체 근무자</th>
+                            <th>사원번호</th>
+                            <th>직책</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">수요일</td>
+                            <td>2020-03-04</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00001</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-11</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00002</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-18</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00003</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-24</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00004</td>
+                            <td>사회복지사</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bottom">
+                <table class="work_table">
+                    <thead>
+                        <tr>
+                            <th>휴무일</th>
+                            <th>휴무일 상세 설정</th>
+                            <th>대체 근무자</th>
+                            <th>사원번호</th>
+                            <th>직책</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">금요일</td>
+                            <td>2020-03-04</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00001</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-11</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00002</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-18</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00003</td>
+                            <td>사회복지사</td>
+                        </tr>
+                        <tr>
+                            <td>2020-03-24</td>
+                            <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                            <td>A00004</td>
+                            <td>사회복지사</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button type="submit" class="complete">완료</button>
+        <div class="modal_layer"></div>
+    </div>
+</body>
+</html>
