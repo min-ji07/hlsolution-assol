@@ -1,57 +1,39 @@
 @import url("default.css");
 @import url("../../images");
-/*공통 body*/
-body{ background-color: #eeeeee; width:1686px; height: 969px; margin:0 auto;}
-.workTeam { position: relative; top: 253px; }
-.title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
-.title p { font-size: 19px; color: #555555; padding-bottom: 14px;}
-.table_inner { float: left; position: absolute; }
-.tab  { 
-    float: left; background: white; 
-    width: 184px; height: 38px; line-height: 38px; 
-    color: #555555; font-size: 13px; text-align: center; border-radius: 15px 15px 0 0; 
-}
-.gray { color: white; background: #a2abb1;}
-.worktable { background: white; width: 1686px; height: 569px; border-radius: 0 20px 20px 20px; box-shadow: 0px 6px 5px #d8d8d8; }
-.workTeamOption { position: relative; width : 1641px; height: 569px; margin: 0 auto; } 
-.Option_inner { position: absolute; width: 100%; text-align: center; top: 26px;} 
-.Option_inner h1 { font-size: 24px; color: #555555; }
-.Option_inner p { font-size: 16px; color: #797979;}
-.leftDiv{ float: left; position: relative; width: 1040px; height: 568px;}
-.leftDiv p{ font-size: 16px; color: #7a7a7a; padding-bottom: 15px;} 
-.rightDiv {float: right; width: 601px; height : 568px; position: relative;}
-/* */
 
-/* 탭 */
-input[type="radio"] { display: none;}
-input[type="radio"] + label { 
+.wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
+.work_setting_04 .title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
+.work_setting_04 .title p { font-size: 19px; color: #555555; padding-bottom: 14px;}
+.work_setting_04 .table_inner { float: left; position: absolute; }
+.work_setting_04 .worktable { background: white; width: 1686px; height: 569px; border-radius: 0 20px 20px 20px; box-shadow: 0px 6px 5px #d8d8d8; }
+.work_setting_04 .workTeam_option { position: relative; width : 1641px; height: 569px; margin: 0 auto; } 
+.work_setting_04 .option_inner { position: absolute; width: 100%; text-align: center; top: 26px;} 
+.work_setting_04 .option_inner h1 { font-size: 24px; color: #555555; }
+.work_setting_04 .option_inner p { font-size: 16px; color: #797979;}
+.work_setting_04 .leftDiv{ float: left; position: relative; width: 1040px; height: 568px;}
+.work_setting_04 .leftDiv p{ font-size: 16px; color: #7a7a7a; padding-bottom: 15px;} 
+.work_setting_04 .rightDiv {float: right; width: 601px; height : 568px; position: relative;}
+.work_setting_04 input[type="radio"] { display: none;}
+.work_setting_04 input[type="radio"] + label { 
     display: inline-block; text-align: center;
     background: #a2abb1; color: white;
     width: 184px; height: 38px; line-height: 38px; font-size: 13px;
     border-radius: 15px 15px 0 0;
 }
-.tabbox { position: absolute; width : 1641px; height: 569px; margin: 0 auto; }
-/* 체크 된 탭*/
-input[type="radio"]:checked + label { background: white; color: #555555;}
-input[id="tab_01"]:checked ~ .con1 {display: block;}
-input[id="tab_02"]:checked ~ .con2 {display: block;} /* 왜 안나옴?*/
+.work_setting_04 .tabbox { position: absolute; width : 1641px; height: 569px; margin: 0 auto; }
+.work_setting_04 input[type="radio"]:checked + label { background: white; color: #555555;}
+.work_setting_04 input[id="tab_01"]:checked ~ .con1 {display: block;}
+.work_setting_04 input[id="tab_02"]:checked ~ .con2 {display: block;}
+.work_setting_04 .year_inner {position: absolute; top: 80px;}
+.work_setting_04 .year_inner select { border:none; border-bottom: 1px solid #9c9c9c; color: #7a7a7a; border-radius: 0px; }
+.work_setting_04 .month { margin-left: 15px;}
 
-
-
-
-.year_inner {position: absolute; top: 80px;}
-.year_inner select { border:none; border-bottom: 1px solid #9c9c9c; color: #7a7a7a; border-radius: 0px; }
-.month { margin-left: 15px;}
-
-.annual { position: absolute; top: 119px;}
-.table_title { width: 991px; height: 31px; border-radius: 30px; }
-.annual div { float: left; height: 31px; line-height: 31px; background: #f5f3f3;  font-size: 16px; color: #818080; padding: 0 17px;}
-.annual .color_red { font-size: 16px; color: #d97a7a;}
-.annual .color_blue { font-size: 16px; color: #6472c8;}
-
-/* table { position: absolute;} */
-tbody {position: absolute; top: 42px;}
-td { border: 1px dotted #cecece; border-top: none;}
-
-.tkdydgusghkd { width: 604px; height: 440px; border: 1px solid black;}
-input[type="text"] { position: absolute; width: 253px; height: 25px; top: 52px; left: 305px;}
+.work_setting_04 .annual { position: absolute; top: 119px;}
+.work_setting_04 .table_title { width: 991px; height: 31px; border-radius: 30px; }
+.work_setting_04 .annual div { float: left; height: 31px; line-height: 31px; background: #f5f3f3;  font-size: 16px; color: #818080; padding: 0 17px;}
+.work_setting_04 .annual .color_red { font-size: 16px; color: #d97a7a;}
+.work_setting_04 .annual .color_blue { font-size: 16px; color: #6472c8;}
+.work_setting_04 tbody {position: absolute; top: 42px;}
+.work_setting_04 td { border: 1px dotted #cecece; border-top: none;}
+.work_setting_04 .search { width: 604px; height: 440px; }
+.work_setting_04 input[type="text"] { position: absolute; width: 253px; height: 25px; top: 52px; left: 305px;}
