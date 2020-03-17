@@ -29,8 +29,11 @@
         alert('다음으로')
     }
 
-    function modal_popup(){
-        $('.modal').show();
+    function modal_popup01(){
+        $('.modal01').show();
+    }
+    function modal_popup02(){
+        $('.modal02').show();
     }
     function close_modal(){
         $('.modal').hide;
@@ -50,8 +53,8 @@
                         </div>
 
                         <div class="buttonset">
-                            <button type="button" class="insert" onclick="modal_popup();">추가</button>
-                            <button type="button" class="delete1" onclick="delete1();">삭제</button>
+                            <button type="button" class="insert" onclick="modal_popup01();">추가</button>
+                            <button type="button" class="delete1" onclick="modal_popup02();">삭제</button>
                             <button type="button" class="save" onclick="save();">저장</button>
                         </div>
                         <div class="right_border">
@@ -74,42 +77,42 @@
                         <div class="table2">
                             <div class="left_border">
                                 
-                                <div class="num A">
+                                <div class="num row1">
                                     <div>A조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num B">
+                                <div class="num row2">
                                     <div>B조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num C">
+                                <div class="num row3">
                                     <div>C조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num D">
+                                <div class="num row4">
                                     <div>D조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num E">
+                                <div class="num row5">
                                     <div>E조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num F">
+                                <div class="num row6">
                                     <div>F조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num G">
+                                <div class="num row7">
                                     <div>G조</div>
                                     <div>5명</div>
                                     <div>1명</div>
                                 </div>
-                                <div class="num H">
+                                <div class="num row8">
                                     <div>H조</div>
                                     <div>5명</div>
                                     <div>1명</div>
@@ -124,15 +127,16 @@
             </div>
 
         
-            <div class="modal">
+            <div class="modal02">
                 <div class="modal_top">
                     <div class="left">대체근무자 설정</div>
-                    <div class="close_modal"><a href="" class="close_modal" onclick="close_modal();"></a>
+                    <div class="close_modal"><a href="" class="close_modal" onclick="modal_popup02();"></a>
                 </div>
                 </div>
                 <div class="modal_bottom">
                     <div class="top">
-                        <table class="work_table">
+                        테이블1
+                        <!-- <table class="work_table">
                             <thead>
                                 <tr>
                                     <th>휴무일</th>
@@ -169,11 +173,12 @@
                                     <td>사회복지사</td>
                                 </tr>
                             </tbody>
-                        </table>
-                    </div>
+                        </table> -->
+                    </div> 
 
                     <div class="bottom">
-                        <table class="work_table">
+                        테이블2
+                        <!-- <table class="work_table">
                             <thead>
                                 <tr>
                                     <th>휴무일</th>
@@ -210,12 +215,68 @@
                                     <td>사회복지사</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> -->
                     </div>
                 </div>
                 <button type="submit" class="complete">완료</button>
                 <div class="modal_layer"></div>
             </div>
+
+
+
+            <div class="modal01">
+                <div class="modal_top">
+                    <div class="left">대체근무자 설정</div>
+                    <div class="close_modal"><a href="" class="close_modal" onclick="modal_popup01();"></a>
+                </div>
+                </div>
+                <div class="modal_bottom minimodal">
+                    <div class="top">
+                        테이블1
+                        <!-- <table class="work_table">
+                            <thead>
+                                <tr>
+                                    <th>휴무일</th>
+                                    <th>휴무일 상세 설정</th>
+                                    <th>대체 근무자</th>
+                                    <th>사원번호</th>
+                                    <th>직책</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4">수요일</td>
+                                    <td>2020-03-04</td>
+                                    <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                                    <td>A00001</td>
+                                    <td>사회복지사</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-03-11</td>
+                                    <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                                    <td>A00002</td>
+                                    <td>사회복지사</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-03-18</td>
+                                    <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                                    <td>A00003</td>
+                                    <td>사회복지사</td>
+                                </tr>
+                                <tr>
+                                    <td>2020-03-24</td>
+                                    <td><input type="text" placeholder="사원이름" maxlength="5"/></td>
+                                    <td>A00004</td>
+                                    <td>사회복지사</td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                    </div>
+                </div>
+                <button type="submit" class="minicomplete">완료</button>
+                <div class="modal_layer"></div>
+            </div>
+
         </div>
     </div>
 </body>

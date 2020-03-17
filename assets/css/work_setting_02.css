@@ -37,27 +37,28 @@ body {background-color: #eeeeee;}
 .work_setting_02 .num div {flex: 1; padding: 24px 49px; transform:translateY(-5%)}
 .work_setting_02 .num div::after { content: ""; position: absolute; width: 3px; height: 53px; background:rgb(255, 255, 255, 0.39); left: 166px; transform:translateY(-20%)}
 .work_setting_02 .num:last-child(div) {content: none;}
-.work_setting_02 .A {background-color: #da9898;}
-.work_setting_02 .B {background-color: #98daa5;}
-.work_setting_02 .C {background-color: #a5cfdd;}
-.work_setting_02 .D {background-color: #a5addd;}
-.work_setting_02 .E {background-color: #d0a5dd;}
-.work_setting_02 .F {background-color: #7c7878;}
-.work_setting_02 .G {background-color: #4d4d4d;}
-.work_setting_02 .H {background-color: #dad1d1;}
-.work_setting_02 .modal { display: none; width: 721px; height: 654px; top: 206px; left: 593px; position: absolute; z-index: 30;}
+.work_setting_02 .row1 {background-color: #da9898;}
+.work_setting_02 .row2 {background-color: #98daa5;}
+.work_setting_02 .row3 {background-color: #a5cfdd;}
+.work_setting_02 .row4 {background-color: #a5addd;}
+.work_setting_02 .row5 {background-color: #d0a5dd;}
+.work_setting_02 .row6 {background-color: #7c7878;} 
+.work_setting_02 .row7 {background-color: #4d4d4d;}
+.work_setting_02 .row8 {background-color: #dad1d1;}
+/* 팝업 */
+.work_setting_02 .modal01 { display: none; width: 721px; height: 356px; top: 306px; left: 593px; position: absolute; z-index: 30;}
+.work_setting_02 .modal02 { display: none; width: 721px; height: 654px; top: 206px; left: 593px; position: absolute; z-index: 30;}
 .work_setting_02 .modal_top { background: #7d7d7d; color: white; font-size: 18px; height: 52px; line-height: 52px; border-radius: 15px 15px 0 0;}
 .work_setting_02 .modal_top div:first-child{ float: left; position: absolute; left: 19px;}
 .modal_top div:last-child{ float: right; position: absolute; right: 19px;}
 .work_setting_02 .close_modal {display: block; top: 13px ; width: 28px; height: 28px; background-image: url('../../images/esc.png');}
 .work_setting_02 .modal_bottom { position: relative; width: 721px; height: 602px; background: white; margin: 0 auto; text-align: center; border-radius: 0 0 15px 15px; box-shadow: 0px 3px 13px #6f6f6f;}
-.work_setting_02 .modal_bottom div { position: absolute; top: 27px; left: 28px; width: 664px; height: 254px; border: 1px solid #d3d3d3; border-top: none;}
+.work_setting_02 .modal_bottom.minimodal { position: relative; width: 721px; height: 331px; background: white; margin: 0 auto; text-align: center; border-radius: 0 0 15px 15px; box-shadow: 0px 3px 13px #6f6f6f;}
+.work_setting_02 .modal_bottom div { position: absolute; top: 27px; left: 28px; width: 664px; height: 254px; border: 1px solid #d3d3d3; }
 .work_setting_02 .modal_bottom .bottom { position: absolute; top: 293px; left: 28px; width: 664px; height: 254px; border: 1px solid #d3d3d3;}
 .work_setting_02 .modal_layer {position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1;}
 .work_setting_02 .complete { position: absolute; top: 613px; right: 27px; color: #f7faf8; font-size: 16px;
     width: 110px; height: 29px; background: #70ae83; border-radius: 15px;}
-.work_setting_02 .work_table { position: absolute; border-radius: 30px;} /*top: 100px*/
-.work_setting_02 thead { width: 664px; height: 30px; background: #f5f3f4; border-radius: 30px;}
-.work_setting_02 td { width: 182px; height: 52px; border: 1px dotted #d0d0d0;}
+.work_setting_02 .minicomplete{ position: absolute; top: 343px; right: 27px; color: #f7faf8; font-size: 16px;
+    width: 110px; height: 29px; background: #70ae83; border-radius: 15px;}
 .work_setting_02 input[type="text"] {width : 114px; height: 25px; border: 1px solid #626262; font-size: 14px; text-indent: 10px;}
-.work_setting_02 tbody { margin-top: 16px;}
