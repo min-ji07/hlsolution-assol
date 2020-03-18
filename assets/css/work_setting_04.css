@@ -44,15 +44,14 @@ input[type="radio"]:checked + label { background: white; color: #555555;}
 input[id="tab_01"]:checked ~ .worktable > .workTeam_option > .work_chart{display: block;}
 input[id="tab_02"]:checked ~ .worktable > .workTeam_option > .annual_box{display: block;} /* 왜 안나옴?*/
 
-/* 삭제해야됨 */
-.a {background-color: #da9898;}
-.b {background-color: #98daa5;}
-.c {background-color: #a5cfdd;}
-.d {background-color: #a5addd;}
-.e {background-color: #d0a5dd;}
-.f {background-color: #7c7878;}
-.g {background-color: #4d4d4d;}
-.h {background-color: #dad1d1;}
+.bg_a {background-color: #da9898;}
+.bg_b {background-color: #98daa5;}
+.bg_c {background-color: #a5cfdd;}
+.bg_d {background-color: #a5addd;}
+.bg_e {background-color: #d0a5dd;}
+.bg_f {background-color: #7c7878;}
+.bg_g {background-color: #4d4d4d;}
+.bg_h {background-color: #dad1d1;}
 
 /* 근무표 */
 .work_chart{
@@ -81,7 +80,6 @@ input[id="tab_02"]:checked ~ .worktable > .workTeam_option > .annual_box{display
     text-transform: uppercase;
     margin-top: 5px;
 }
-
 .work_chart .select_month button{
     display:block;
     width:20px;
@@ -93,7 +91,7 @@ input[id="tab_02"]:checked ~ .worktable > .workTeam_option > .annual_box{display
     cursor: pointer;
 }
 .work_chart .select_month button.btn_right{
-    left:unset;
+    left:auto;
     right:0;
     background:url("../../images/btn_right.png") no-repeat center;
 }
