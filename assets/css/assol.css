@@ -1,0 +1,49 @@
+
+@import url("default.css");
+@import url("../../images");
+/* 공통 css */
+/* 클래스 명은 나중에 다시 수정 */
+.wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
+.hide { text-indent: -999px; overflow: hidden;}
+
+
+/* 메뉴 타이틀*/
+.menu_title { font-size: 24px; color: #555555;} /* h3 */
+.menu_title_content { font-size: 19px; color: #555555;} /* h3 밑에 올 p*/
+/* content 타이틀*/
+
+/* 메뉴 소제목 ex) 근무조 설정 근무자 설정 연차 설정 등등 */
+.mini_menu_title { font-size: 18px; color: #797979;}
+
+
+/* 추가 삭제 저장 버튼 */
+.btn_insert, .btn_delete, .btn_save { 
+    background: #bdbdbd; width: 68px; height: 22px; line-height: 22px; 
+    border-radius: 50px; color: white; font-size: 16px; cursor: pointer;
+}
+/* 이전 다음으로 */
+.btn_next {
+    background: #87c395; color: white; 
+    width: 118px; height: 27px; line-height: 27px;
+    border-radius: 30px; font-size: 19.5px;
+}
+/* 이전버튼에 클래스 추가 */
+.btn_back { 
+    background: #bfbfbf;
+}
+/* */
+a.work_01_plus_button {
+    display: inline-block; width: 20px; height: 20px; line-height: 20px;
+    background: url("../../images/work_01_plus_button.png") no-repeat;
+    color: transparent;
+}
+a.work_01_plus_button.minus {
+    background-image :url("../../images/work_01_minus_button.png");
+}
+
+a.work_02_plus_button {
+    display: inline-block; width: 25px; height: 25px; line-height: 25px;
+    background: url("../../images/work_02_plus_button_02.png") no-repeat;
+    color: transparent;
+}
+

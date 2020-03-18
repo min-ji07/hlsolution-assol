@@ -1,6 +1,7 @@
 @import url("default.css");
 @import url("../../images");
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 body {background-color: #eeeeee;}
 .wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
 .work_setting_01 .title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
@@ -24,15 +25,20 @@ body {background-color: #eeeeee;}
 .work_setting_01 .table { position: absolute; top: 130px; width: 1600px; height: 404px; border: 1px solid #d3d3d3; text-align: center;}
 .work_setting_01 .backnext { position: absolute; float: right; top: 552px; right: 6px;}
 .work_setting_01 .back, .next { width: 118px; height: 27px; border-radius: 30px; font-size: 19.5px; color: white; } 
+.work_setting_01 .back, .next a { color: white; } 
 .work_setting_01 .back { background: #bfbfbf; margin-right: 12px; line-height: 50%; cursor:pointer;}
 .work_setting_01 .next { background: #87c395; line-height: 50%; cursor:pointer;} 
-.work_setting_01 .modal { display: none; width: 506px ; height: 381px; margin: 0 auto; top: 391px; left: 707px; position: absolute; top: 390pxpx; left: 707px; z-index: 30;}
+.work_setting_01 .next { color: white;} 
+.work_setting_01 .modal { display: none; width: 506px ; height: 381px; margin: 0 auto; top: 391px; left: 707px; position: absolute; top: 390px; left: 707px; z-index: 30;}
 .work_setting_01 .modal_top { background: #7d7d7d; color: white; font-size: 18px; height: 45px; line-height: 45px; border-radius: 15px 15px 0 0;}
 .work_setting_01 .modal_top div:first-child{ float: left; position: absolute; left: 31px;}
 .work_setting_01 .modal_top div:last-child{ float: right; position: absolute; right: 30px ;}
 .work_setting_01 .modal_top a {color: white;}
+.work_setting_01 .close_modal {display: block; margin-top: 9px ; width: 28px; height: 28px; background-image: url('../../images/esc.png');}
 .work_setting_01 .modal_bottom {width: 506px; height: 336px; background: white; margin: 0 auto; text-align: center; border-radius: 0 0 15px 15px; box-shadow: 0px 3px 13px #6f6f6f;}
 .work_setting_01 .modal_bottom img { position: relative; padding-top: 53px;}
 .work_setting_01 .modal_bottom p { padding-top: 53px;}
 .work_setting_01 .modal_bottom button { margin-top: 10px; background: #7d7d7d; width: 131px; height: 30px; line-height: 30px; color: white; border-radius: 15px;}
 .work_setting_01 .modal_layer {position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1;}
+
+

@@ -19,9 +19,6 @@
     function close_modal(){
         $('.modal').hide;
     }
-    function schedule_option(){
-        alert('근무표 설정 페이지로 넘어갑니다.')
-    }
 </script>
 <body>
     <div class="wrapper">
@@ -33,19 +30,22 @@
             <div class="schedule_img">
                 <button class="scheduleView" onclick="scheduleView();">
                     <img src="images/scheduleView.png" alt="근무표보기" /></button>
-                <button class="schedule_option" onclick="schedule_option();">
+                <button class="schedule_option" onclick="location.href='work_setting_01.html'">
                     <img src="images/scheduleOption.png" alt="근무표설정" /></button>
             </div>
             
             <div class="modal">
                 <div class="modal_top">
                     <div class="left">안내</div>
-                    <div class="close_modal"><button type="button" onclick="close_modal();"></button></div>
+                    <div class="close_modal">
+                        <button type="button">
+                            <img src="images/esc.png" alt="닫기" onclick="close_modal();"/></button>
+                    </div>
                 </div>
                 <div class="modal_bottom">
                     <img src="images/modal_img.jpg" alt="근무표 설정 후 근무표 보기를 선택해 주세요." />
                     <p>근무표 설정 후 근무표 보기를 선택해 주세요.</p>
-                    <button type="button" onclick="schedule_option();">근무표 설정하기</button>
+                    <button type="button" onclick="location.href='work_setting_01.html'">근무표 설정하기</button>
                 </div>
                 <div class="modal_layer"></div>
             </div>
