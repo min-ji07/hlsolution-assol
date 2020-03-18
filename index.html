@@ -10,6 +10,10 @@
     <title>assol</title>
 </head>
 <style>
+    html,
+    body{
+        height:100%;
+    }
     a{
         color: white;
     }
@@ -42,15 +46,15 @@
     }
     input{
         border-style: none;
-        background-color: #414F5C;
+        background-color: #4b5c5f;
         text-align: center;
         font-size: 20px;
         color: white;
         margin: 0 auto;
         width: 310px; height: 44px;
         border-radius: 50px;
-        background:linear-gradient(to bottom, #42505D 0%,  #404E5B 50%, #3C4A55 100%);
-        box-shadow: 3px 2px 4px #192028
+        /* background:linear-gradient(to bottom, #42505D 0%,  #404E5B 50%, #3C4A55 100%); */
+        box-shadow: 3px 2px 4px #202d2f;
     }
     input:focus{
         outline: none;
@@ -62,42 +66,41 @@
         position: absolute;
         top: 0;
         left: 0%;
-        width: 33%; height: 1080px; 
+        width: 33%;
     }
     #div02{
         position: absolute;
         top: 0;
         left: 33%;
-        width: 33%; height: 1080px; 
+        width: 34%;
         text-align: center;
     }
     #div03{
         position: absolute;
         top: 0;
-        left: 66%;
-        width: 33%; height: 1080px;
+        left: 67%;
+        width: 33%;
     }
     #ACE{
         display: none;
     }
 </style>
 <body>
-    <div class="bodydiv">
-        <div id="img01">
-            <img src="images/loginmain.jpg"> 
+    <div class="bodydiv" style="width:100%; height:100%;">
+        <div id="img01" style="width:100%; height:100%;">
+            <img src="images/loginmain.png" style="width:100%; height:100%;"> 
         </div>
         <div id="div01" style="float: left;">
         </div>
         <div id="div02">
             <div class="AceIcon">
-                <h2 id="ACE">assol</h2><img src="images/icon.png" style="margin-top: 310px;">
+                <h2 id="ACE">assol</h2><img src="images/logo_login.png" style="margin-top: 313px;">
             </div>
             <div class="AceJoin">
                 <form name="join" action="main2.html" method="POST">
                     <input type="text" class="userLogin" placeholder="Admin ID" style="margin-top: 70px; "><br>
-                    <input type="password" class="userPass" placeholder="password" style="margin-top: 24px;"><br>
-                    <button type="submit" class="submit01" value="Admin Login" style="margin-top: 23px; border-radius: 50px; 
-                        background:linear-gradient(to right, #BAD8CE 0%, #9AB3DB 36%, #A1A3D3 64%, #907BB4 100%); box-shadow: 3px 2px 4px #192028;">Admin Login</button>
+                    <input type="password" class="userPass" placeholder="Password" style="margin-top: 24px;"><br>
+                    <button type="submit" class="submit01" value="Admin Login" style="margin-top: 23px; border-radius: 50px; background:url('./images/icon_login.png') no-repeat 22% center; background-color:#77b1b7;">Admin Login</button>
                 </form>
             </div>
             <div class="userContent" style="margin-top: 12px;">
