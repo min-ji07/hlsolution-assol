@@ -300,3 +300,73 @@ input[id="tab_02"]:checked ~ .worktable > .workTeam_option > .annual_box{display
     margin-right:20px;
     padding-right:5px;
 }
+.annual_box .search_box{
+    position: relative;
+    display:inline-block;
+    overflow:hidden;
+    vertical-align: middle;
+    margin-right:30px;
+}
+.annual_box .search_box input{
+    width: 160px;
+    height: 25px;
+    border:0 none;
+    border-bottom:1px solid #808080;
+    border-radius: 0px;
+    text-indent: 5px;
+    font-size:18px;
+    padding-bottom:3px;
+}
+.annual_box .search_box input::placeholder{
+    font-size:18px;
+    color:#555;
+}
+.annual_box .search_box button{
+    width:20px;
+    height:20px;
+    background:url("../../images/btn_search.png") no-repeat center;
+    position: absolute;
+    right:0;
+    bottom:10px;
+}
+.annual_box .month_title_bg{
+    display:inline-block;
+    padding:8px 15px;
+    font-size:18px;
+    color:white;
+    background-color:#7FABB8;
+    border-radius: 18px 18px 0 0;
+}
+.annual_box .month_title_bg span{
+    padding-bottom:5px;
+    border-bottom:1px solid white;
+    padding-right:20px;
+}
+.annual_box .month_head{
+    width:100%;
+    height:30px;
+    line-height:30px;
+    background-color:#7FABB8;
+    color:white;
+    text-align:center;
+    font-size:15px;
+    border-radius: 0 18px 18px 18px;
+    margin-bottom:8px;
+}
+.annual_box .month_head li{
+    width:14.2%;
+    float:left;
+}
+.annual_box .month_head li:last-child{
+    width:14.8%;
+}
+.annual_box .calendar_box{
+    width:100%;
+}
+.txt_blue{
+    color:#3f56b6;
+}
+.txt_red{
+    color:#d24d4e;
+}
+.work_setting_04 .back{ background: #bfbfbf;}

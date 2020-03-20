@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>assol</title>
 </head>
 <style>
@@ -84,7 +85,64 @@
     #ACE{
         display: none;
     }
+    .userContent button{
+        background:url("../../images/bg_login_line.png") no-repeat right center;
+    }
+    .userContent button:last-child{
+        background:none;
+    }
+    
+
+    .login_modal {
+        display:block;
+        top: 50px;
+        left: 20%;
+        position: absolute;
+        z-index: 30;
+        width:60%;
+        overflow: hidden;
+    }
+    .login_modal .modal_top {
+        width:100%;
+        background: #a2abb1;
+        color: white;
+        font-size: 18px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 15px 15px 0 0;
+        font-weight: bold;
+    }
+    .login_modal .modal_top div:first-child{ float: left; position: absolute; left: 31px;}
+    .login_modal .modal_top div:last-child{ float: right; position: absolute; right: 30px ;}
+    .login_modal .modal_top a {color: white;}
+    .login_modal .close_modal {display: block; margin-top: 9px ; width: 28px; height: 28px; background-image: url('/images/esc.png');}
+    .login_modal .modal_bottom {
+        width: 100%;
+        height: 800px;
+        background: white;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0px 3px 13px #6f6f6f;
+    }
+    .login_modal .modal_bottom img { position: relative; padding-top: 53px;}
+    .login_modal .modal_bottom p { padding-top: 53px;}
+    .login_modal .modal_bottom button { margin-top: 10px; background: #7d7d7d; width: 131px; height: 30px; line-height: 30px; color: white; border-radius: 15px;}
+    .login_modal .modal_layer {position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1;}
+
 </style>
+<script>
+    $(function(){
+        $(".close_modal").on("click",function(){
+            close_modal();
+        });
+
+        const close_modal = () => {
+            $(".login_modal").hide();
+            return false;
+        }
+    });
+</script>
 <body>
     <div class="bodydiv" style="width:100%; height:100%;">
         <div id="img01" style="width:100%; height:100%;">
@@ -113,7 +171,17 @@
             <div id="div03">
             </div>
         </div>
-    <script>
-    </script>
+        <div class="login_modal">
+            <div class="modal_top">
+                <div class="left">회원가입</div>
+                <div>
+                    <a href="#" class="close_modal"></a>
+                </div>
+            </div>
+            <div class="modal_bottom">
+                
+            </div>
+            <div class="modal_layer"></div>
+        </div>
 </body>
 </html>

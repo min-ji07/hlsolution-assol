@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
     <title>사원별 연차관리 현황</title>
+    <script>
+        $(function() {
+            $( "#testDatepicker" ).datepicker({
+            });
+        });
+    </script>
 </head>
 <style>
     @import url("assets/css/work_setting_04.css");
@@ -43,6 +51,7 @@
                                 테이블 영역
                             </div>
                             <div class="btn_box">
+                                <button class="back">이전으로</button>
                                 <button class="btn_excel">엑셀파일다운</button>
                                 <button class="btn_pdf">PDF다운로드</button>
                             </div>
@@ -54,6 +63,10 @@
                             </div>
                             <div class="left_box">
                                 <div class="date_box">
+                                    <div class="search_box">
+                                        <input type="text" placeholder="사원검색">
+                                        <button></button>
+                                    </div>
                                     <label for="select_year">년도</label>
                                     <select id="select_year">
                                         <option>2020</option>
@@ -79,7 +92,20 @@
                                 </div>
                             </div>
                             <div class="right_box">
-                                캘린더 영역
+                                <div class="month_title_bg">
+                                    <span>1월 연차사용현황</span>
+                                </div>
+                                <ul class="month_head">
+                                    <li>월요일</li>
+                                    <li>화요일</li>
+                                    <li>수요일</li>
+                                    <li>목요일</li>
+                                    <li>금요일</li>
+                                    <li class="txt_blue">토요일</li>
+                                    <li class="txt_red">일요일</li>
+                                </ul>
+                                <div class="calendar_box">
+                                </div>
                             </div>
                         </div>
                     </div>
