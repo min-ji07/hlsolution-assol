@@ -11,9 +11,12 @@
     <title>사원별 연차관리 현황</title>
     <script>
         $(function() {
-            $( "#testDatepicker" ).datepicker({
-            });
+
         });
+
+        const close_modal = () => {
+            $(".modal_box").hide();
+        }
     </script>
 </head>
 <style>
@@ -63,10 +66,6 @@
                             </div>
                             <div class="left_box">
                                 <div class="date_box">
-                                    <div class="search_box">
-                                        <input type="text" placeholder="사원검색">
-                                        <button></button>
-                                    </div>
                                     <label for="select_year">년도</label>
                                     <select id="select_year">
                                         <option>2020</option>
@@ -86,6 +85,10 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
+                                    <div class="search_box">
+                                        <input type="text" placeholder="사원검색"/>
+                                        <button></button>
+                                    </div>
                                 </div>
                                 <div class="table_box">
                                     테이블 영역
@@ -109,6 +112,87 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        
+            <div class="modal_box mb1">
+                <div class="modal_top">
+                    <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+                </div>
+                <div class="modal_bottom">
+                    <a href="#" title="추가근무설정 버튼">
+                        <img src="./images/work_04_pop_img.png" title="추가근무설정 - 인원의 추가 근무일을 설정합니다.">
+                    </a>
+                    <a href="#" title="추가휴무/연차설정 버튼">
+                        <img src="./images/work_04_pop_img2.png" title="추가휴무/연차설정 - 인원의 추가 휴무/연차일을 설정합니다.">
+                    </a>
+                </div>
+                <div class="modal_bg">
+                </div>
+            </div>
+
+            <div class="modal_box mb2">
+                <div class="modal_top">
+                    <div class="modal_title">추가근무 상세</div>
+                    <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+                </div>
+                <div class="modal_bottom">
+                    <div class="day_box">7</div>
+                    <div class="desc_box">
+                        <p>
+                            <span class="dsec_title">성&nbsp;&nbsp;&nbsp;명</span>
+                            <span>박이삭</span>
+                        </p>
+                        <p>
+                            <span class="dsec_title">근무조</span>
+                            <select>
+                                <option>라라라라라라라조</option>
+                                <option>나나ㅏㄴ나나나</option>
+                                <option>A조</option>
+                                <option>B조</option>
+                            </select>
+                        </p>
+                        <p>
+                            <button class="btn_submit">완료</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal_bg">
+                </div>
+            </div>
+
+            <div class="modal_box mb3">
+                <div class="modal_top">
+                    <div class="modal_title">추가휴뮤/연차 상세</div>
+                    <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+                </div>
+
+                <div class="modal_bottom">
+                    <div>
+                        테이블 영역
+                    </div>
+                    <p style="text-align:right; margin-top:10px;">
+                        <button class="btn_submit">완료</button>
+                    </p>
+                </div>
+                <div class="modal_bg">
+                </div>
+            </div>
+
+            <div class="modal_box mb4" style="display: block;">
+                <div class="modal_top">
+                    <div class="modal_title">연차현황 상세</div>
+                    <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+                </div>
+
+                <div class="modal_bottom">
+                    <div class="day_box">22</div>
+                    <div class="table_box">
+                        테이블 영역
+                    </div>
+                </div>
+                <div class="modal_bg">
                 </div>
             </div>
         </div>

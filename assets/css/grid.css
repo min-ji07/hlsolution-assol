@@ -22,6 +22,9 @@
     border-radius:30px !important;
     border:0 none !important;
 }
+.ag-header-viewport{
+    border-radius: 30px !important;
+}
 /* 헤더 text 가운데 정렬 */
 .ag-header-cell-label{
     justify-content: center !important;
@@ -134,7 +137,7 @@
 /* 고정컬럼 header 영역 */
 .work_table_result .ag-pinned-left-header{
     border-right:0 none !important;
-    margin-right:10px !important;
+    margin-right:15px !important;
 } 
 /* 고정컬럼 cell 영역 */
 .work_table_result .ag-pinned-left-cols-container{

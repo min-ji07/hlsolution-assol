@@ -1,0 +1,22 @@
+/* calendar */
+.work_table_result .datepicker{
+	width:100% !important;
+	box-sizing:border-box  !important;
+}
+.work_table_result .datepicker--nav{
+	display:none  !important;
+}
+.work_table_result .datepicker--days-names{
+	display:none  !important;
+}
+.work_table_result .datepicker--cell{
+	height:62px  !important;
+}
+/* 오늘 날짜 색상 */
+/* 포커스, 선택시 색상*/
+.work_table_result .datepicker--cell.-current-,
+.work_table_result .datepicker--cell.-selected-.-focus-,
+.work_table_result .datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-{
+    background-color:#5d8d9c  !important;
+    color:white !important;
+}
