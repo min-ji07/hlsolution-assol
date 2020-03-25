@@ -247,7 +247,7 @@ a.work_02_plus_btn {
  input.test { 
     display :inline-block; border: 1px solid #afafaf; border-radius: 0px; 
     width: 93px; height: 24px; 
-    background: url(../../images/work_03_icon01.png) no-repeat 4px center; 
+    background: url(../../images/work_03_icon01.png) no-repeat 0px center; 
     background-color: #d6d6d6;
     text-indent: 22px;
 }
