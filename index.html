@@ -9,179 +9,202 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>assol</title>
-</head>
-<style>
-    html,
-    body{
-        height:100%;
-    }
-    a{
-        color: white;
-    }
-    a:hover{
-        color: white;
-    }
-    a:link{
-        text-decoration: none;
-    }
-    a:visited{
-        text-decoration: none;
-    }
-    button{
-        border-style: none;
-        background: transparent;
-        text-align: center;
-        height: 30px;
-        cursor:pointer; 
-        color: white;
-        width: 310px; height: 44px; 
-    }
-    .submit01{
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: white;
-    }
-    button:focus{
-        outline: none;
-    }
-    input{
-        border-style: none;
-        background-color: #4b5c5f;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        margin: 0 auto;
-        width: 310px; height: 44px;
-        border-radius: 50px;
-        /* background:linear-gradient(to bottom, #42505D 0%,  #404E5B 50%, #3C4A55 100%); */
-        box-shadow: 3px 2px 4px #202d2f;
-    }
-    input:focus{
-        outline: none;
-    }
-    input::placeholder{
-        color:rgba(220, 220, 220, 0.774);
-    }
-    #div01{
-        position: absolute;
-        top: 0;
-        left: 0%;
-        width: 33%;
-    }
-    #div02{
-        position: absolute;
-        top: 0;
-        left: 33%;
-        width: 34%;
-        text-align: center;
-    }
-    #div03{
-        position: absolute;
-        top: 0;
-        left: 67%;
-        width: 33%;
-    }
-    #ACE{
-        display: none;
-    }
-    .userContent button{
-        background:url("../../images/bg_login_line.png") no-repeat right center;
-    }
-    .userContent button:last-child{
-        background:none;
-    }
-    
+    <script>
+        $(function() {
+            $(".btn_next").on("click",function(){
 
-    .login_modal {
-        display:block;
-        top: 50px;
-        left: 20%;
-        position: absolute;
-        z-index: 30;
-        width:60%;
-        overflow: hidden;
-    }
-    .login_modal .modal_top {
-        width:100%;
-        background: #a2abb1;
-        color: white;
-        font-size: 18px;
-        height: 45px;
-        line-height: 45px;
-        border-radius: 15px 15px 0 0;
-        font-weight: bold;
-    }
-    .login_modal .modal_top div:first-child{ float: left; position: absolute; left: 31px;}
-    .login_modal .modal_top div:last-child{ float: right; position: absolute; right: 30px ;}
-    .login_modal .modal_top a {color: white;}
-    .login_modal .close_modal {display: block; margin-top: 9px ; width: 28px; height: 28px; background-image: url('/images/esc.png');}
-    .login_modal .modal_bottom {
-        width: 100%;
-        height: 800px;
-        background: white;
-        margin: 0 auto;
-        text-align: center;
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0px 3px 13px #6f6f6f;
-    }
-    .login_modal .modal_bottom img { position: relative; padding-top: 53px;}
-    .login_modal .modal_bottom p { padding-top: 53px;}
-    .login_modal .modal_bottom button { margin-top: 10px; background: #7d7d7d; width: 131px; height: 30px; line-height: 30px; color: white; border-radius: 15px;}
-    .login_modal .modal_layer {position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: -1;}
-
-</style>
-<script>
-    $(function(){
-        $(".close_modal").on("click",function(){
-            close_modal();
+            });
         });
-
+    
         const close_modal = () => {
-            $(".login_modal").hide();
+            $(".modal_box").hide();
             return false;
         }
-    });
-</script>
+    </script>
+    <style>
+        @import url("assets/css/login.css");
+    </style>
+</head>
 <body>
-    <div class="bodydiv" style="width:100%; height:100%;">
+    <div class="login" style="width:100%; height:100%;">
         <div id="img01" style="width:100%; height:100%;">
             <img src="images/loginmain.png" style="width:100%; height:100%;"> 
         </div>
+
         <div id="div01" style="float: left;">
         </div>
+
         <div id="div02">
             <div class="AceIcon">
                 <h2 id="ACE">assol</h2><img src="images/logo_login.png" style="margin-top: 313px;">
             </div>
             <div class="AceJoin">
-                <form name="join" action="main2.html" method="POST">
-                    <input type="text" class="userLogin" placeholder="Admin ID" style="margin-top: 70px; "><br>
-                    <input type="password" class="userPass" placeholder="Password" style="margin-top: 24px;"><br>
-                    <button type="submit" class="submit01" value="Admin Login" style="margin-top: 23px; border-radius: 50px; background:url('./images/icon_login.png') no-repeat 22% center; background-color:#77b1b7;">Admin Login</button>
+                <form name="login" action="main2.html" method="POST">
+                    <input type="text" class="login_input" placeholder="Admin ID" style="margin-top: 70px;"><br>
+                    <input type="password" class="login_input" placeholder="Password" style="margin-top: 24px;"><br>
+                    <button type="submit" class="btn_login" value="Admin Login">Admin Login</button>
                 </form>
             </div>
             <div class="userContent" style="margin-top: 12px;">
-                <button id="user IdGo" style="width: 112px; height: 30px; left: 933px;"><a href="userIdSearch.html">아이디찾기</a></button>
-                <button id="user PwGo" style="width: 112px; height: 30px; left: 933px;"><a href="userPassWardSearch.html">비밀번호 찾기</a></button>
-                <button id="user join" style="width: 112px; height: 30px; left: 933px;"><a href="join.html">회원가입</a></button>
+                <button>아이디 찾기</button>
+                <button>비밀번호 찾기</button>
+                <button>회원가입</button>
             </div>
         </div>
+
+        <div id="div03">
         </div>
-            <div id="div03">
-            </div>
-        </div>
-        <div class="login_modal">
+
+        <div class="modal_box mb1" style="display:block;">
             <div class="modal_top">
-                <div class="left">회원가입</div>
-                <div>
-                    <a href="#" class="close_modal"></a>
-                </div>
+                <div class="modal_title">회원가입</div>
+                <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
             </div>
             <div class="modal_bottom">
-                
+                <form>
+                    <fieldset>
+                        <label class="title_label" for="agreement1">회원약관</label>
+                        <textarea id="agreement1" readonly></textarea>
+                        <p class="radio_box">
+                            <input type="radio" id="confirm_y" name="confirm1"></radio>
+                            <label for="confirm_y">동의합니다.</label>
+                            <input type="radio" id="confirm_n" name="confirm1"></radio>
+                            <label for="confirm_n">동의하지않습니다.</label>
+                        </p>
+
+                        <label class="title_label" for="agreement2">개인정보 수집 · 이용에 대한 안내</label>
+                        <textarea id="agreement2" readonly>
+                        </textarea>
+                        <p class="radio_box">
+                            <input type="radio" id="confirm2_y" name="confirm2"></radio>
+                            <label for="confirm2_y">동의합니다.</label>
+                            <input type="radio" id="confirm2_n" name="confirm2"></radio>
+                            <label for="confirm2_n">동의하지않습니다.</label>
+                        </p>
+
+                        <label class="title_label" for="agreement1">서비스 이용약관</label>
+                        <textarea id="agreement3" readonly>
+■ 수집하는 개인정보 항목
+회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 직업 , 회사명 , 부서 , 직책 , 회사전화번호 , 취미 , 결혼여부 , 기념일 , 법정대리인정보 , 서비스 이용기록 , 접속 로그 , 접속 IP 정보 , 결제기록
+ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
+■ 개인정보의 수집 및 이용목적
+회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
+ο 회원 관리
+회원제 서비스 이용에 따른 본인확인 , 개인 식별   , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
+접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+■ 개인정보의 보유 및 이용기간
+회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.
+                        </textarea>
+                        <p class="radio_box">
+                            <input type="radio" id="confirm3_y" name="confirm3"></radio>
+                            <label for="confirm3_y">동의합니다.</label>
+                            <input type="radio" id="confirm3_n" name="confirm3"></radio>
+                            <label for="confirm3_n">동의하지않습니다.</label>
+                        </p>
+
+                        <p class="agreement_all">
+                            <input type="radio">
+                            <label>
+                                회원약관, 개인정보 수집 및 이용, 서비스 이용약관에 <span class="txt_point">모두 동의</span> 합니다.
+                            </label>
+                        </p>
+                        <p class="btn_box">
+                            <button class="btn_next">다음으로</button>
+                        </p>
+                    </fieldset>
+                </form>
             </div>
-            <div class="modal_layer"></div>
+            <div class="modal_bg">
+            </div>
         </div>
+
+        <div class="modal_box mb2" style="display: block;">
+            <div class="modal_top">
+                <div class="modal_title">회원가입</div>
+                <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+            </div>
+
+            <div class="modal_bottom">
+                <form>
+                    <fieldset>
+                        <p class="title_label">기관정보 입력</p>
+                        <p>
+                            <label class="required">요양 기관명</label>
+                            <input type="text" placeholder="기관명을 입력해주세요."/>
+                        </p>
+                        <p>
+                            <label>기관기호</label>
+                            <input type="text" placeholder="기호를 입력해주세요."/>
+                        </p>
+                        <p>
+                            <span class="required">급여종류</span>
+                            <input id="radioPay" type="radio" name="pay" checked>
+                            <label for="radioPay">주야간보호센터</label>
+                            <input id="radioPay2" type="radio" name="pay">
+                            <label for="radioPay2">노인요양시설</label>
+                            <input id="radioPay3" type="radio" name="pay">
+                            <label for="radioPay3">노인요양공동생활가정</label>
+                            <input id="radioPay4" type="radio" name="pay">
+                            <label for="radioPay4">가정방문급여</label>
+                        </p>
+                        <p>
+                            <label for="businessNum" class="required">사업자번호</label>
+                            <input id="businessNum" type="text" placeholder="00" maxlength="2" style="width:20px;"/> - 
+                            <input id="businessNum2" type="text" placeholder="00" maxlength="2" style="width:20px;"/> - 
+                            <input id="businessNum3" type="text" placeholder="00000" maxlength="5" style="width:50px;"/>
+                        </p>
+                        <p>
+                            <label>전화번호</label>
+                            <input type="text" placeholder="000-000-0000"/>
+                        </p>
+                        <p>
+                            <label class="required">기관주소</label>
+                            <input type="text"/>
+                            <button class="btn_addr">우편번호</button>
+                            <input type="text" placeholder="상세주소를 입력해 주세요">
+                        </p>
+                        <p>
+                            <label class="required">아이디</label>
+                            <input type="text" placeholder="아이디를 입력해주세요"/>
+                        </p>
+                        <p>
+                            <label class="required">비밀번호</label>
+                            <input type="password" placeholder="비밀번호를 입력해주세요"/>
+                        </p>
+                        <p>
+                            <label class="required">비밀번호확인</label>
+                            <input type="password" placeholder="비밀번호를 입력해주세요"/>
+                        </p>
+                        <p>
+                            <label class="">이메일주소</label>
+                            <input type="text" placeholder="이메일주소를 입력해주세요"/>
+                        </p>
+                        <p>
+                            <span>이메일수신</span>
+                            <input type="radio" id="email_y" name="email" checked/>
+                            <label for="email_y">동의</label>
+                            <input type="radio" id="email_n" name="email"/>
+                            <label for="email_n">동의하지않음</label>
+                        </p>
+                        <p>
+                            <span>SMS문자수신</span>
+                            <input type="radio" id="sms_y" name="sms" checked/>
+                            <label for="sms_y">동의</label>
+                            <input type="radio" id="sms_n" name="sms"/>
+                            <label for="sms_n">동의하지않음</label>
+                        </p>
+                        <p class="btn_box">
+                            <button class="btn_next">등록하기</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal_bg">
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>

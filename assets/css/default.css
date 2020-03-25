@@ -168,12 +168,25 @@ button{cursor:pointer;}
 .bg_c49.ag-cell:before{background: #CD853F; }
 .bg_c50.ag-cell:before{background: #D2691E; }
 
-
-
 /* 공통 css */
 /* 클래스 명은 나중에 다시 수정 */
+body { background-color: #eeeeee; }
 .wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
 .hide { text-indent: -999px; overflow: hidden;}
+
+/* 글자색 */
+.txt_basic { color: #626262;}
+.txt_Light { color:#bfbfbf; } /* 검색해주세요 */
+.txt_bold { font-weight: bold;}
+.txt_red01 { color: #ee7e7e;}
+.txt_red02 { color: #c83f3f;}
+.txt_red_content { color: #e29d9d;}
+.txt_blue01 { color: #6472c8;}
+.txt_blue_content { color: #8f98d5;}
+
+/* 배경색 */
+.bg_green01 { background: #87c395; }
+.bg_gray01 { background: #bfbfbf; }
 
 /* 메뉴 타이틀*/
 .menu_title { font-size: 24px; color: #555555;} /* h3 */
@@ -183,38 +196,59 @@ button{cursor:pointer;}
 /* 메뉴 소제목 ex) 근무조 설정 근무자 설정 연차 설정 등등 */
 .mini_menu_title { font-size: 18px; color: #797979;}
 
-
-/* 추가 삭제 저장 버튼 */
-.btn_insert, .btn_delete, .btn_save { 
-    background: #bdbdbd; width: 68px; height: 22px; line-height: 22px; 
-    border-radius: 50px; color: white; font-size: 16px; cursor: pointer;
+/* 기본 회색 버튼 */
+.btn_gray {
+    display: inline-block; 
+    text-align: center; border-radius: 50px;
+    background: #bdbdbd; color: white; font-size: 16px; cursor: pointer;
+    width: 68px; height: 22px; line-height: 22px; 
 }
-/* 이전 다음으로 */
-.btn_next {
-    background: #87c395; color: white; 
+/* 이전&다음으로 */
+.btn_backnext {
+    display: inline-block;
+    color: white; text-align: center; border-radius: 30px;
     width: 118px; height: 27px; line-height: 27px;
-    border-radius: 30px; font-size: 19.5px;
+    font-size: 19.5px; 
 }
-/* 이전버튼에 클래스 추가 */
-.btn_back { 
-    background: #bfbfbf;
+/* /////////////////////////////////////급여대장/////////////////////////////////// */
+/* 지난급여 불러오기 시 클래스 추가 */
+.sal_folder {
+    width: 166px; height: 22px; line-height: 22px;
+    vertical-align: top;
+    background-image: url("../../images/folder.png") no-repeat 8px center;
+} 
+
+/* 급여대장 인쇄 시 클래스 추가*/
+.sal_print {
+    width: 122px; height: 22px; line-height: 22px;
 }
-/* */
-a.work_01_plus_button {
+
+/* /////////////////////////////////////근무설정/////////////////////////////////// */
+/* 휴식시간 추가 */ 
+a.work_01_plus_btn {
     display: inline-block; width: 20px; height: 20px; line-height: 20px;
     background: url("../../images/work_01_plus_button.png") no-repeat;
     color: transparent;
 }
-a.work_01_plus_button.minus {
-    background-image :url("../../images/work_01_minus_button.png");
+/* 휴식시간 삭제 */
+a.work_01_plus_btn.minus {
+    background :url("../../images/work_01_minus_button.png") no-repeat;
 }
-
-a.work_02_plus_button {
+/* 대체근무자 추가 */
+a.work_02_plus_btn {
     display: inline-block; width: 25px; height: 25px; line-height: 25px;
-    background: url("../../images/work_02_plus_button_02.png") no-repeat;
+    background: url(../../images/work_02_plus_button_02.png) no-repeat;
     color: transparent;
 }
-
+ 
+ /* 휴가시작일 및 캘린더 필요한 input 박스 */
+ input.test { 
+    display :inline-block; border: 1px solid #afafaf; border-radius: 0px; 
+    width: 93px; height: 24px; 
+    background: url(../../images/work_03_icon01.png) no-repeat 4px center; 
+    background-color: #d6d6d6;
+    text-indent: 22px;
+}
 
 /* 팝업 공통 */
 .modal_box {
