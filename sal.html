@@ -36,179 +36,257 @@
         }
         $('.text2 ul li select').append(html);
     }
+    $(function() {
+        $( "#calender01" ).datepicker({
+        });
+    });
+    $(function() {
+        $( "#calender02" ).datepicker({
+        });
+    });
     </script>
-    <section id="salSection">
-        <div class="leftContainer">
-            <h1>급여대장</h1>
-            <p>월별, 사원별 급여 및 상여금 정보를 입력, 저장, 관리 할 수 있습니다. <span>* 귀속연월, 급여차수를 확인해주세요.</span></span></p>
+    <div class="wrapper">
+        <div class="sal">
+            <div class="sal_inner">
+                <div class="title">
+                    <h1>급여대장</h1>
+                </div>
+                <div class="left_div">
+                    <div class="sal_date">
+                        <div class="sal_date_left">
+                            <ul>
+                                <li>귀속연월
+                                    <select size="1">
+                                        <option value="2021" selected="selected">2020</option>
+                                    </select>
+                                    <select size="1">
+                                        <option>1</option>
+                                    </select>
+                                </li>
+                                <li>급수차수
+                                    <select size="1" class="wi_90">
+                                        <option value="급여-01차">급여-01차</option>
+                                        <option value="급여-02차">급여-02차</option>
+                                        <option value="급여-03차">급여-03차</option>
+                                        <option value="급여-04차">급여-04차</option>
+                                        <option value="급여-05차">급여-05차</option>
+                                        <option value="급여-06차">급여-06차</option>
+                                        <option value="급여-07차">급여-07차</option>
+                                        <option value="급여-08차">급여-08차</option>
+                                        <option value="급여-09차">급여-09차</option>
+                                        <option value="급여-10차">급여-10차</option>
+                                        <option value="급여-11차">급여-11차</option>
+                                        <option value="급여-12차">급여-12차</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <div class="tab">
+                                <input type="radio" id="tab_01" name="tab" checked/>
+                                <label for="tab_01">일반소득</label>
+                                <input type="radio" id="tab_02" name="tab" />
+                                <label for="tab_02">사업소득 / 기타소득</label>
+                                <p>* 귀속연월, 급여차수를 확인해주세요.</p>
+                            </div>
+                        </div>
 
-            <div class="text1 ">
-                정산기간 2020.01.01 ~ 2020.01.31 급여지급일 2020.01.31
-            </div>
-            <div class="text2">
-                <ul>
-                    <li>귀속연월
-                        <select size="1">
-                            <option value="2021" selected="selected">2020</option>
-                            <option value="2022">2021</option>
-                            <option value="2023">2022</option>
-                        </select>
-                        <select size="1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                        </select>
-                    </li>
-                    <li>급수차수
-                        <select size="1">
-                            <option value="급여-01차">급여-01차</option>
-                            <option value="급여-02차">급여-02차</option>
-                            <option value="급여-03차">급여-03차</option>
-                            <option value="급여-04차">급여-04차</option>
-                            <option value="급여-05차">급여-05차</option>
-                            <option value="급여-06차">급여-06차</option>
-                            <option value="급여-07차">급여-07차</option>
-                            <option value="급여-08차">급여-08차</option>
-                            <option value="급여-09차">급여-09차</option>
-                            <option value="급여-10차">급여-10차</option>
-                            <option value="급여-11차">급여-11차</option>
-                            <option value="급여-12차">급여-12차</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <div class="text3">
-                <div class="salLoad">
-                    <img src="images/folder.png" alt="지난급여불러오기" /><p>지난급여불러오기 clear : both; 신규추가 </p>
-                </div>
-                <div>
-                    선택삭제  float : right
-                </div>
-                내용 table
-            </div>
-            <div class="result">
-                <div class="result1">
-                    <div class="gray font">
-                        <div class="left">월합계</div>
-                        <div class="right1"> 건</div>
-                        <div class="right">45</div>
+                        <div class="sal_date_right">
+                            <ul>
+                                <li>
+                                    <label for="calender01">정산기간</label>
+                                    <input type="text" id="calender01" class="calender"/>
+                                </li>
+                                <li>
+                                    <label for="calender02">급여지급일</label>
+                                    <input type="text" id="calender02" class="calender"/>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="blue font">
-                        <div class="left">지급총액</div>
-                        <div class="right1"> 원</div>
-                        <div class="right">112,304,400</div>
-                    </div>
-                </div>
-                <div class="result2">
-                    <div class="pink font">
-                        <div class="left">공제총액</div>
-                        <div class="right1"> 원</div>
-                        <div class="right">24,304,400</div>
-                    </div>
-                    <div class="green font">
-                        <div class="left">실지급액</div>
-                        <div class="right1"> 원</div>
-                        <div class="right">97,304,400</div>
-                    </div>
-                </div>
-            </div>
 
+                    <div>
+                        <div class="sal_table_inner">
+                            <div class="button_set">
+                                <button type="button" class="btn_gray sal_folder">
+                                    <img src="images/folder.png" alt="지난급여불러오기">
+                                    지난급여불러오기</button>
+                                <a href="#" class="btn_gray">추가</a> 
+                                <a href="#" class="btn_gray">삭제</a>
+                                <a href="#" class="btn_gray">저장</a>
+                                <button type="button" class="btn_gray sal_print">급여대장 인쇄</button>
+                            </div>
+                            <div class="sal_table">
+                                테이블 들어올 곳
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sal_box">
+                        <div class="sal_basic_top">
+                            <div class="gray font01">
+                                <div class="left_title">월합계</div>
+                                <div class="right1_title"> 건</div>
+                                <div class="right_title">45</div>
+                            </div>
+                            <div class="blue font01 mg_le_4">
+                                <div class="left_title">지급총액</div>
+                                <div class="right1_title"> 원</div>
+                                <div class="right_title">112,304,400</div>
+                            </div>
+                        </div>
+                        <div class="sal_basic_bottom">
+                            <div class="pink font01">
+                                <div class="left_title">공제총액</div>
+                                <div class="right1_title"> 원</div>
+                                <div class="right_title">24,304,400</div>
+                            </div>
+                            <div class="green font01 mg_le_4">
+                                <div class="left_title">실지급액</div>
+                                <div class="right1_title"> 원</div>
+                                <div class="right_title">97,304,400</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- 왼쪽 디브 -->
+
+
+
+                <div class="right_div"><!-- 오른쪽 디브 -->
+                    <div class="right_inner">
+
+                        <div class="sal_basic bd_blue"><!-- 지급항목 -->
+                            <form class="sal_form">
+                                <fieldset>
+                                    <legend class="legend01 blue">지급항목
+                                        <button type="button"><img src="images/sal_01_plus_button.png"></button>
+                                    </legend>
+                                    <div class="fidldset_inner">
+                                        <ul>
+                                            <li>
+                                                <label for="rlqhsrmq">기본급</label>
+                                                <input type="text" id="rlqhsrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="tlreoql">식대비</label>
+                                                <input type="text" id="tlreoql" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="rmsthrwkdfurma">근속장려금</label>
+                                                <input type="text" id="rmsthrwkdfurma" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="tjdrhkrmq">성과급</label>
+                                                <input type="text" id="tjdrhkrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="dirkstnekd">야간수당</label>
+                                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="dirkstnekd">연장근로수당</label>
+                                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="dirkstnekd">교통비</label>
+                                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                            <li>
+                                                <label for="dirkstnekd">인지활동가산금</label>
+                                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="sal_basic_value left"><p>지급 총액</p></div>
+                            <div class="sal_basic_value right"><p>2,800,000 </p></div>
+                        </div>
+
+                        <div class="sal_basic ri_17 bd_pink"><!-- 공제항목 -->
+                            <form class="sal_form">
+                                <fieldset>
+                                    <legend class="legend01 pink">공제항목</legend>
+                                    <div class="fidldset_inner">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <label for="rlqhsrmq">국민연금</label>
+                                                    <input type="text" id="rlqhsrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+
+                                                    <label for="tlreoql">건강보험</label>
+                                                    <input type="text" id="tlreoql" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+
+                                                    <label for="rmsthrwkdfurma">장기요양보험</label>
+                                                    <input type="text" id="rmsthrwkdfurma" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <label for="tjdrhkrmq">고용보험</label>
+                                                    <input type="text" id="tjdrhkrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <label for="dirkstnekd">소득세</label>
+                                                    <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+
+                                                    <label for="dirkstnekd">지방소득세</label>
+                                                    <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
+                                                    <hr>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="sal_basic_value left"><p>공제 총액</p></div>
+                            <div class="sal_basic_value right"><p>224,560</p></div>
+                        </div>
+
+                        <div class="font01 font02">
+                            <div class="left_title num01">실지급액</div>
+                            <div class="right1_title num03"> 원</div>
+                            <div class="right_title num02">2,576,440</div>
+                        </div>
+
+                        <div class="salary">
+                            <button type="button" class="btn_gray wid199_hei69"><img src="images/sal_setting_img.png">수정/저장</button>
+                            <button type="button" class="btn_gray wid199_hei69"><img src="images/sal_print_icon.png">명세서인쇄</button>
+                            <button type="button" class="btn_gray wid199_hei69 yellow mr_0"><img src="images/sal_email_icon.png">메세지 보내기</button>
+                        </div>
+
+
+                    </div><!-- 지급항목, 공제항목 감싸는 디브-->
+
+
+
+                    
+                </div><!-- 오른쪽 디브 -->
+            </div>   
         </div>
-
-
-        <div class="rightContainer">
-            <div class="tap01">
-                <h6>일반소득</h6>
-            </div>
-            <div class="searchbox">
-                <input type="search" class="inputsearch" placeholder="사원 검색" />
-                <button type="button" onclick="searchimg();" class="search"><img src="images/search.png" /></button>
-                <fieldset>
-                    <legend>지급항목</legend>
-                    <ul>
-                        <li>
-                            <div>
-                                <label for="rlqhsrmq">기본급</label>
-                                <input type="text" id="rlqhsrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-
-                                <label for="tlreoql">식대비</label>
-                                <input type="text" id="tlreoql" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-
-                                <label for="rmsthrwkdfurma">근속장려금</label>
-                                <input type="text" id="rmsthrwkdfurma" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label for="tjdrhkrmq">성과급</label>
-                                <input type="text" id="tjdrhkrmq" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label for="dirkstnekd">야간수당</label>
-                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-
-                                <label for="dirkstnekd">연장근로수당</label>
-                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-
-                                <label for="dirkstnekd">교통비</label>
-                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-
-                                <label for="dirkstnekd">인지활동가산금</label>
-                                <input type="text" id="dirkstnekd" maxlength="9" onkeyup="inputNumberFormat(this)" />
-                                <hr>
-                            </div>
-                        </li>
-                    </ul>
-                </fieldset>
-            </div>
-            <div class="tap02 hidden">
-                <h6>사업소득 / 기타소득</h6>
-            </div>
-            <div>
-
-            </div>
-        </div>
-        
-    </section>
+    </div>
 </body>
 </html>

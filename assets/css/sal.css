@@ -3,57 +3,213 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* 헤더 */
 
-body{ background-color: #eeeeee; width:1686px; height: 969px; margin:0 auto;}
-#salSection {position: relative; top: 249px;} 
+body{ background-color: #eeeeee; }
+.gray { background-color: #a6a6a6; }
+.blue { background-color: #61c7cc; } 
+.pink { background-color: #ecacac; } 
+.green { background-color: #52b9a8; }
+.yellow{ background-color: #dfc339;}
+.bd_blue { border: 1px solid #61c7cc;}
+.bd_pink { border: 1px solid #ecacac;}
+.mg_le_4 { margin-left: 5px; }
+.top_10 { margin-top: 10px;}
+.ri_17 { right: 20px;}
+
+
+.wrapper {  width:1686px; margin:0 auto; margin-top: 40px; }
+.sal { position: relative;}
+.title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
+.title p { font-size: 19px; color: #555555; padding-bottom: 27px;}
+.sal_inner { position: relative ; } 
 .leftContainer { float: left; width: 977px; height: 788px;}
-.leftContainer h1 { color : #565656; font-size: 23px; top: 249px; padding-bottom: 18px;} /* 위치 안맞을 경우 20씩 올리기 */
-.leftContainer p {color : #555555; font-size: 15px; top: 289px; bottom: 16px;}
-.leftContainer span {color : #e26c6c; font-size: 15px; }
-.text1 {position: absolute; float: right; background-color: white; width: 977px; height: 38px; top: 91px; border-radius: 10px;
-    text-align: right 22px; font-size: 15px;} /* 위치 안맞을 경우 20씩 올리기 */
-.text2 {position: absolute; float: left; background-color: #51616e; width: 466px; height: 38px;  
-    border-radius: 10px; top: 91px; }/* 위치 안맞을 경우 20씩 올리기 */
-.text2 ul li { float: left; text-align: center; color: white; font-size: 15px; list-style-type: disc; margin-left: 35px;}
+
+.left_div { position: absolute; width: 977px; height: 641px;}
+.sal_date { 
+    position: absolute; 
+    background-color: white; 
+    width: 977px; height: 38px; line-height: 38px;
+    border-radius: 10px;
+}
+/* 정산기간 & 급여지급일 */
+.sal_date_right {
+    background-color: white; width: 52%; height: 38px; line-height: 38px; 
+    border-radius: 10px; text-align: right; font-size: 15px; right: 0; float: right;
+}
+.sal_date_right ul li{ 
+    float: left; height: 40px; line-height: 40px; 
+    color: #6e6e6e; font-size: 15px;
+    list-style-type: disc;
+    margin-left: 30px;
+}
+.sal_date_right ul li label { 
+    float: left; 
+    margin-left: -7px; right: 10px; height: 40px; line-height: 40px;
+    font-size: 15px;
+}
+
+
+/* 급여지급일 input */
+input[type=text].calender { 
+    width: 96px; text-indent: 0px; 
+    background-color: transparent; background-image: url('images/sal_down_button.png') no-repeat; 
+    margin-right: 0px; margin-left: 9px; border: none; border-bottom: 1px solid #919191;
+}
+#calender01 { width: 180px; height: 28px;}
+#calender02 { width: 96px; height: 28px;}
+
+.sal_date_left {
+    background: #799093; border-radius: 10px;
+    width: 466px; height: 38px; float: left;  
+}
+.sal_date_left ul li { 
+    float: left; text-align: center; color: white; font-size: 15px; 
+    list-style-type: disc; margin-left: 35px;
+}
+
 /*옵션 값에 대한 설정*/
-.text2 ul li select option {font-size: 11px;}
-.text2 ul li { color: white; vertical-align: middle; }
-.text2 select { border: none; background: transparent; }
-.text3 { position: absolute; background-color: white; width: 977px; height: 428px; top: 144px; border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8;}/* 위치 안맞을 경우 20씩 올리기 */
-.rightContainer { position: relative; float: right; width: 675px; height: 667px; background-color: white; border-radius: 0 20px 20px 20px; top: 119px;} 
-.salLoad { height: 48px; background-color: #a2abb2; border-radius: 20px 20px 0 0; color: white; font-size: 13px;} 
-.salLoad p { float : left; padding-left: 7px;}
+.sal_date_left ul li select option {font-size: 11px;}
+.sal_date_left ul li { color: white; vertical-align: middle; }
+
+.sal_date_left select { 
+    border: none; border-bottom: 1px solid white;
+    background: transparent; margin-top: -5px; 
+    width: 70px; height: 24px; font-size: 13px; color: white;
+    border-radius: 0px; text-align-last: center;
+}
+.sal_date_left select.wi_90 { width: 90px;}
+.tab { position: absolute; top: 56px;}
+.tab label img { margin-right: 7px;}
+.tab p { position: absolute; color: #ee7e7e; top : 0px; font-size: 16px; left: 422px; width: 300px;}
+.sal_table_inner { 
+    position: absolute; background-color: white; 
+    width: 978px; height: 383px; top: 95px; 
+    border-radius: 0 20px 20px 20px; box-shadow: 0px 6px 5px #d8d8d8;
+}
+.button_set{
+    margin-top: 14px; margin-left: 15px;
+}
+.sal_folder { margin-left: 7px;}
+.sal_folder img { margin-top: -5px;}
+.button_set .sal_print{ float: right; margin-right: 24px;}
+.sal_table{ 
+    position: relative; top: 10px;
+    width: 932px; height: 308px; margin: 0 auto;
+    border: 1px solid gray;
+}
+.right_div { 
+    position: relative; top: 42px;
+    float: right; width: 692px; height: 599px; 
+    right: 0px; background: white; border-radius: 20px;
+    box-shadow: 0px 6px 5px #d8d8d8;
+} 
+.right_inner { width: 650px; height: 599px; margin: 0 auto;}
 /* 합계 란 */
-.result {position: relative;}
-.result1 {position : absolute; top: 538px;}
-.result2 {position : absolute; top: 646px; }
-.gray {float: left; background-color: #a6a6a6; width: 475px; height: 90px; border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8; }
-.blue { float: right;background-color: #61c7cc; width: 475px; height: 90px; border-radius: 20px; margin-left: 27px;box-shadow: 0px 6px 5px #d8d8d8;}
-.pink { float: left; background-color: #ecacac; width: 475px; height: 90px; border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8;}
-.green {float: right; background-color: #52b9a8; width: 475px; height: 90px; border-radius: 20px; margin-left: 27px; box-shadow: 0px 6px 5px #d8d8d8;}
-/* 소득 및 사대보험 조회 */
-.tap01{position:absolute; background-color: white; width: 205px; height: 50px; top: -50px; border-radius: 20px 20px 0 0; }
-.tap02{position:absolute; background-color: #a2abb2; width: 205px; height: 50px; top: -50px; left: 206px; border-radius: 20px 20px 0 0;}
-.tap01 h6 {text-align: center; font-size: 15px; color: #555555;} /* 가운데 정렬 엌케함 ㅠ */
-.tap02 h6 {text-align: center; font-size: 15px; color: white; }
+/* .sal_box { float: left;} */
+.sal_basic_top {position : absolute; top: 489px; }
+.sal_basic_bottom {position : absolute; top: 571px; }
+
+.salary {position: absolute;}
+/* 클래스명 변경*/
+.font01 { 
+    float: left; width: 446px; height: 31px; 
+    padding: 20px; line-height: 31px;
+    border-radius: 15px; box-shadow: 0px 6px 5px #d8d8d8; 
+} 
+.font02 { 
+    position: absolute; top: 426px; border: 1px solid #8c8c8c; 
+    box-shadow: none ; width: 610px;
+}
+/* 수정 저장 명세서 인쇄 외 버튼 */
+.salary { position: absolute; top: 509px; width: 650px;}
+.wid199_hei69 { 
+    width: 199px; height: 69px; line-height: 69px;
+    border-radius: 15px; font-weight: bold; margin-right: 23px;}
+.wid199_hei69 img { margin-right: 10px;}
+.mr_0 { margin-right: 0px;}
+
+
 
 /* input 속성*/ /* 이거 border에 밑줄 주는거 아니고 after 만들어야 하나 */
 input::placeholder { font-size: 15px; color: #b2b7bb;}
 .search { background-color: transparent; width: 18px; height: 20px; line-height: 50%; top: 15px;}
 input {border: none;}
 input.inputsearch { width: 270px; height: 30px; margin-left: 25px; border-bottom: solid #979fa6;}
-.searchbox { height: 47px; margin-top: 15px; }
-fieldset { width: 291px; border: 1px solid #62c7ce; margin-top : 35px; margin-left: 14px; border-radius: 10px;}
-fieldset ul li { position: relative;}
-legend { width: 131px; height: 25px; left: 14px; background-color: #62c7ce; border-radius : 30px; margin-left: 14px; font-size: 15px; color: white;}
-ul li label { float: left; margin-left: 20px; right: 10px;}
-ul input[type=text] { float: right;  width: 144px; border-radius: 0px; margin-bottom: 19px; margin-right: 14px;}
+.sal_basic {
+    position: absolute;
+    height: 47px; top: 30px; 
+    width: 312px; height: 381px; background-color: white; border-radius: 20px; 
+    
+}
+.fidldset_inner {
+    width: 317px; height: 310px; margin-top: 21px;
+    overflow: scroll; overflow-x: hidden;
+}
+.sal_form form:after {
+    width: 265px; height: 2px; background: #8c8c8c;
+}
+.sal_basic_value{
+    float: left;
+    padding: 12px;
+    color: #7d7d7d; font-size: 16px; font-weight: bold;
+
+}
+/* 스크롤 커스텀 */
+.fidldset_inner::-webkit-scrollbar {background: #e9e9e9; width: 9px; height: 363px; border-radius: 50px;}
+.fidldset_inner::-webkit-scrollbar-thumb {background: #a2a2a2; width: 9px; height: 63px; border-radius: 50px;}
+.fidldset_inner::-webkit-scrollbar-track {background: #e9e9e9; width: 9px; height: 300px;}
+fieldset { width: 291px; border-radius: 10px;}
+.sal_form::after { 
+    content:""; display: block;
+    width: 270px; height: 2px; background: #8c8c8c; 
+    margin-left: 21px;
+}
+
+
+form.sal_form ul li { position: relative; height: 47px;}
+legend { 
+    width: 131px; height: 25px; 
+    left: 14px; border-radius : 30px; 
+    margin-left: 14px; 
+    font-size: 15px; color: white;
+}
+legend button { background: transparent; width: 16px; height: 16px; line-height: 1px;}
+.legend01 {
+    position: absolute;
+    margin-top: -10px; text-align: center;
+}
+ul li label { 
+    float: left; 
+    margin-left: 25px; right: 10px; height: 47px; line-height: 47px;
+    font-size: 15px;
+}
+ul input[type=text] { 
+    float: right;  width: 144px; border-radius: 0px; margin-right: 17px;
+}
+.fidldset_inner ul input[type=text] {
+    margin-top: 7px;
+}
+
 hr { position: absolute; width: 255px; top: 36px; left: 20px;}
-.rightContainer input { text-align: right;}
-.left {float: left; font-size: 19px; color: white;}
-.right {float: right; font-size: 41px; color: white; font-weight: bold; }
-.right1 { float: right; font-size: 21px; color: white;}
+.right_div input { text-align: right; }
+.left_title {float: left; font-size: 19px; color: white;}
+.right_title {float: right; font-size: 41px; color: white; font-weight: bold; }
+.right1_title { float: right; font-size: 21px; color: white; line-height: 48px;}
+.left { float: left; margin-left: 12px;}
+.right { float: right; margin-right: 12px;}
 
+/* 클래스 수정 실지급액 */
+.num01 {color: #7d7d7d; font-size: 18px;}  
+.num02 {font-size: 33px; color: #7d7d7d;}
+.num03 {font-size: 17px; font-weight: bold; color: #7d7d7d;}
 
-
-
+/* 탭 */
+input[type="radio"] + label { 
+    display: inline-block;  
+    text-align: center; background: #a2abb1; color: white;
+    width: 206px; height: 38px; line-height: 38px; font-size: 13px;
+    border-radius: 15px 15px 0 0;
+}
+/* 체크 된 탭*/
+input[type="radio"]:checked + label { background-color: white; color: #555555;}
+input[type="radio"] { display: none;}
 

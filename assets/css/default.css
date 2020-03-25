@@ -215,13 +215,15 @@ body { background-color: #eeeeee; }
 .sal_folder {
     width: 166px; height: 22px; line-height: 22px;
     vertical-align: top;
-    background-image: url("../../images/folder.png") no-repeat 8px center;
+    background-image: url("../images/folder.png") no-repeat 8px center;
 } 
 
 /* 급여대장 인쇄 시 클래스 추가*/
 .sal_print {
     width: 122px; height: 22px; line-height: 22px;
 }
+
+
 
 /* /////////////////////////////////////근무설정/////////////////////////////////// */
 /* 휴식시간 추가 */ 
