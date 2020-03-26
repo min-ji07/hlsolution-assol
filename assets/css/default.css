@@ -172,6 +172,8 @@ button{cursor:pointer;}
 /* 클래스 명은 나중에 다시 수정 */
 body { background-color: #eeeeee; }
 .wrapper {  width:1686px; margin:0 auto; margin-top: 40px;}
+.title h1 { font-size: 24px; color: #555555; padding-bottom: 12px;}
+.title p { font-size: 19px; color: #555555; padding-bottom: 27px;}
 .hide { text-indent: -999px; overflow: hidden;}
 
 /* 글자색 */
@@ -242,13 +244,11 @@ a.work_02_plus_btn {
     background: url(../../images/work_02_plus_button_02.png) no-repeat;
     color: transparent;
 }
- 
- /* 휴가시작일 및 캘린더 필요한 input 박스 */
- input.test { 
+/* 휴가시작일 및 캘린더 필요한 input 박스 */
+input.input_calendar { 
     display :inline-block; border: 1px solid #afafaf; border-radius: 0px; 
     width: 93px; height: 24px; 
-    background: url(../../images/work_03_icon01.png) no-repeat 0px center; 
-    background-color: #d6d6d6;
+    background: url(../../images/work_03_icon01.png) no-repeat 0px center;
     text-indent: 22px;
 }
 
@@ -295,7 +295,6 @@ a.work_02_plus_btn {
     padding:15px;
     box-sizing:border-box;
 }
-
 .modal_box .modal_bg {
     position: fixed;
     top: 0px;

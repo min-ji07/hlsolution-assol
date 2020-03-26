@@ -1,0 +1,42 @@
+@import url("default.css");
+@import url("../../images");
+
+body {background-color: #eeeeee;}
+.title p { padding-bottom: 92px;} /* 원천세신고서 위치랑 맞춤 , 다르게 하려면 67px */
+
+/* 메인 메뉴 공통 버튼 */
+.menu_main_button_div{
+    margin: 0 auto;
+    width: 1311px; height: 460px;
+}
+.menu_main_button_div img{
+    border-radius: 10px;
+    width: 303px; height: 460px;
+}
+/* 버튼 */
+.menu_main_button {
+    float: left; margin-left: 33px;
+    width: 303px; height: 460px;
+    border-radius: 10px;
+    transition: all 2s;
+    box-shadow: 0px 6px 5px #d8d8d8;
+}
+.mg_le_0 { margin-left: 0px;}
+/* 마우스 hover 시 */
+.menu_main_button:hover {
+    transform: translateY(-35px);
+}
+
+/* 원천세 hover 시 변경 이미지 */
+.num00 {
+    background: url("../../images/withholding_tax_00_00.png");
+}
+.num00:hover {
+    background: url("../../images/withholding_tax_00_01.png");
+}
+.num01 {
+    background: url("../../images/withholding_tax_01_00.png");
+}
+.num01:hover {
+    background: url("../../images/withholding_tax_01_01.png");
+}
