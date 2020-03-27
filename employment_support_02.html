@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고용지원금 신청 및 관리</title>
+</head>
+<style>
+    @import url("assets/css/employment_support_02.css");
+</style>
+<script>
+    function modal(){
+        $('.modal_box').show();
+    }
+    function close_modal(){
+        $('.modal_box').hide;
+    }
+</script>
+<body>
+    <div class="wrapper">
+        <div class="employment_support_02">
+            <div class="title">
+                <h1>고용지원금 신청, 관리</h1> 
+                <p>고용지원금 신청 및 현황을 확인 하실 수 있습니다.</p>
+            </div>
+
+
+
+            <div class="employment_inner">
+
+                <div class="left_div"><!-- 왼쪽 디브 -->
+                    <div class="left_top_div">
+                        <div class="left_first">
+                            <div class="top_title">[청년추가고용장려금]</div>
+                            <div class="bottom_content txt_blue01">적용</div>
+                        </div>
+                        <div class="left_first mg_28">
+                            <div class="top_title">[일자리안정자금]</div>
+                            <div class="bottom_content txt_blue01">4명</div>
+                        </div>
+                        <div class="left_first">
+                            <div class="top_title">[두루누리사회보험]</div>
+                            <div class="bottom_content txt_red01">검토중</div>
+                        </div>
+                    </div>
+                    <div class="modal_box">
+                        <div class="modal_top">
+                            <div class="modal_title">3월 고용지원금 신청 및 현황</div>
+                            <div class="modal_close"><a href="#" onclick="close_modal()"></a></div>
+                        </div>
+                        <div class="modal_bottom"> 
+                            <div class="modal_bottom_inner">
+                                <ul>
+                                    <li>청년추가고용장려금</li>
+                                    <li>일자리안정자금</li>
+                                    <li>두루누리사회보험</li>
+                                    <li>일자리안정자금</li>
+                                    <li>기타등등고용지원금</li>
+                                    <li>지원금1</li>
+                                    <li>지원금2</li>
+                                </ul>
+
+                            </div>
+                            <div class="paging">
+                                <ul>
+                                    <li><img src="images/employment_support_02_paging.png" alt="이전으로"></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li><img src="images/employment_support_01_paging.png" alt="다음으로"></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        
+                    </div>
+                </div>
+
+                <div class="right_div"><!-- 오른쪽 디브 -->
+                    <div class="right_inner">
+                        <input type="radio" id="tab_01" name="tab" checked/>
+                        <label for="tab_01">처리해야할 목록</label>
+                        <input type="radio" id="tab_02" name="tab" />
+                        <label for="tab_02">완료목록</label>
+                        <div class="right_inner_content">
+                            <ul>
+                                <li class="mg_to_17">청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                                <li>청년추가고용장려금</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

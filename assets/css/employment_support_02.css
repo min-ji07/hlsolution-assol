@@ -1,0 +1,163 @@
+@import url("default.css");
+@import url("../../images");
+
+body {background-color: #eeeeee;}
+.title h1 { padding-bottom: 2px;}
+.title p { padding-bottom: 27px;}
+.mg_to_17 { margin-top: 17px;}
+.mg_28 { margin: 0 28px;}
+
+.employment_inner{
+    position: relative;
+    width: 1689px; height: 591px; 
+    border-radius: 20px; 
+}
+
+.left_div {
+    float: left;
+    width: 743px; height: 591px;
+}
+
+.left_top_div {
+    /* 위에 3개 감싸는 디브*/
+    width: 743px; height: 134px;
+}
+.left_first {
+    float: left;
+    width: 229px; height: 134px;
+    background: white;
+    border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8; 
+}
+.top_title {
+    height: 67px; 
+    text-align: center; line-height: 81px; 
+    font-size: 22px; 
+}
+.bottom_content {
+    height: 64px; text-align: center;
+    line-height: 50px; font-weight: bold;
+    font-size: 38px; 
+}
+
+.left_bottom_div {
+    margin-top: 17px;
+    width: 743px; height: 440px;
+    background: white; 
+    border-radius: 20px; box-shadow: 0px 6px 5px #d8d8d8; 
+}
+
+.modal_box {
+    display: block;
+    width: 743px;
+    position: relative;
+    top: 16px;
+    left: 0px;
+    z-index: 0;
+}
+.modal_box .modal_top {
+    width: 743px;
+    height:36px;
+    line-height: 36px;
+    background: #7d7d7d;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px 20px 0 0;
+}
+.modal_box .modal_close a{
+    display: block;
+    margin-top: 9px ;
+    width: 28px;
+    height: 28px;
+    background: url('../../images/employment_support_02_plus_button.png') no-repeat;
+}
+.modal_box .modal_bottom{
+    width: 743px;
+    height: 404px;
+    overflow:hidden;
+    background: white;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 6px 5px #d8d8d8;
+    padding: 16px;
+    box-sizing:border-box;
+}
+.modal_bottom_inner {
+    position: relative;
+    width: 709px; height: 327px;
+    margin: 0 auto;
+    top: 10px;
+    border-bottom: 2px solid #959595;
+}
+/* 3월 고용지원금 신청 및 현황 */
+.modal_bottom_inner ul li {
+    width: ;
+}
+.modal_bottom_inner ul li::before {
+    content:"완료";
+    display: block; width: 114px; height: 29px;
+    color: white; font-size: 15px;
+}
+.modal_box .modal_bottom .paging {
+    width: 150px; height: 30px; line-height: 30px;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+.modal_box .modal_bottom .paging ul li {
+    float: left;
+    width: 25px; height: 30px; line-height: 30px;
+}
+.right_div {
+    float: right;
+    width: 943px; height: 591px; 
+}
+.right_inner {
+    width: 862px; height: 591px;
+    margin-left: 81px;
+}
+.right_inner_content {
+    width: 862px; height: 552px;
+    border-top: 1px solid #bdbdbd;
+
+}
+.right_inner_content ul li {
+    list-style-type: disc;
+    width: 861px; height: 42px; line-height: 42px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.right_inner_content ul li::after {
+    position: absolute;
+    margin-top: 11px; right: 20px;
+    border-radius: 50px;
+    content: "확인필요"; width: 80px; height: 20px;
+    background: #50b97c; color: white;
+    text-align: center; line-height: 20px;
+}
+/* 읽음 */
+/* .right_inner_content ul li::after {
+    position: absolute;
+    margin-top: 11px; right: 20px;
+    border-radius: 50px;
+    content: "읽음"; width: 80px; height: 20px;
+    background: #959595; color: white;
+    text-align: center; line-height: 20px;
+} */
+
+
+/* 탭 */
+input[type="radio"] + label { 
+    display: inline-block;  
+    text-align: center; background: #bdbdbd; color: white;
+    width: 141px; height: 36px; line-height: 38px; font-size: 13px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer; position: relative;
+    top: 1px; z-index: 30;
+}
+/* 체크 된 탭*/
+input[type="radio"]:checked + label { 
+    background: #eeeeee; border: 1px solid #bdbdbd; color: #555555;}
+input[type="radio"] { display: none;}
+.right_div .right_inner:first-child label { border-bottom: none;}
+
+
+
+ 
