@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <title>사원별 연차관리 현황</title>
+    <script>
+    </script>
+</head>
+<style>
+    @import url("assets/css/contract_01.css");
+</style>
+<body>
+    <div class="wrapper">
+        <div class="contract_01">
+            <div>
+                <h3 class="menu_title">정규직 근로자 계약서 작성</h3>
+                <p class="menu_title_content">전자문서및 전자거래기본법에 의해 전자적 형태의 계약서 교부, 보존이 인정됩니다.</p>
+            </div>
+            <div class="assol_content w75 rm1">
+                근로계약서 영역
+            </div>
+            <div class="assol_content pop w25">
+                <div class="top_box">직원 근로 급여 정보</div>
+                <div class="content_box">
+                    <div class="scroll_box">
+                        <p>
+                            <label>직원명</label>
+                            <input type="text" placeholder="직원명을 입력하세요.">
+                        </p>
+                        <p>
+                            <label>계약체결일</label>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>근로계약시작일</label>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>수습계약기간</label>
+                            <input id="check_box1" class="checkbox_radio" type="checkbox"><label for="check_box1">수습계약기간(선택)</label>
+                        </p>
+                        <p>
+                            <label>업무내용</label>
+                            <input type="text" placeholder="업무내용을 적어주세요.">
+                        </p>
+                        <p>
+                            <label>업무장소</label>
+                            <input type="text" placeholder="회사사업장 내">
+                        </p>
+                        <p>
+                            <label>근로시간및 휴계시간</label>
+                            <input id="check_box2" class="checkbox_radio" type="checkbox"><label for="check_box2">근무시간 일괄적용</label>
+                        </p>
+                        <p>
+                            <label>급여총액</label>
+                            <select>
+                                <option>월급</option>
+                                <option>연봉</option>
+                                <option>시급</option>
+                            </select>
+                            <input type="text">
+                        </p>
+                        <p>
+                            <label>급여구성설정</label>
+                            <input id="check_box3" class="checkbox_radio" type="checkbox"><label for="check_box3">비과세수당/포괄임금제설정(선택)</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button class="btn_backnext bg_gray01">미리보기</button>
+                    <button class="btn_backnext bg_gray01">이전으로</button>
+                    <button class="btn_backnext bg_skyblue01">다음으로</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

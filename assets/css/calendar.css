@@ -16,7 +16,8 @@
 /* 포커스, 선택시 색상*/
 .work_table_result .datepicker--cell.-current-,
 .work_table_result .datepicker--cell.-selected-.-focus-,
-.work_table_result .datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-{
+.work_table_result .datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current-{
     background-color:#5d8d9c  !important;
     color:white !important;
 }

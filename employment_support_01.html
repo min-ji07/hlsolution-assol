@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <title>사원별 연차관리 현황</title>
+    <script>
+    </script>
+</head>
+<style>
+    @import url("assets/css/employment_support_01.css");
+</style>
+<body>
+    <div class="wrapper">
+        <div class="employment_support_01">
+            <div>
+                <h3 class="menu_title">고용지원금 알림</h3>
+                <p class="menu_title_content line2">지원금에 대한 상세한 정보가 필요한 경우, 해당 지원금 이름을 클릭해주세요.<br>추가적인 문의가 필요한 경우 자주 묻는 질문을 이용해주세요.</p>
+            </div>
+            <div class="assol_content pop w25">
+                <div class="top_box">
+                    고용지원금 필터 설정
+                    <label class="toggle_box" style="margin-left:8px;">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="content_box">
+                    <div class="scroll_box">
+                        <ul class="filter_box">
+                            <li>회사 조건 설정</li>
+                            <li>
+                                <span>근로자수</span>
+                                <select>
+                                    <option selected>5인미만</option>
+                                    <option>20인미만</option>
+                                    <option>50인미만</option>
+                                    <option>100인미만</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>업종</span>
+                                <select>
+                                    <option selected>사회복지사업</option>
+                                </select>
+                            </li> 
+                            <li>
+                                <span>업력</span>
+                                <select>
+                                    <option selected>3년미만</option>
+                                    <option>10년미만</option>
+                                    <option>20년미만</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul class="filter_box fb2">
+                            <li>고용지원금 신청내역</li>
+                            <li>
+                                <span>청년추가고용 장려금</span>
+                                <label class="toggle_box">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span>일자리 안전자금</span>
+                                <label class="toggle_box">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </li> 
+                            <li>
+                                <span>두루누리사회보험</span>
+                                <label class="toggle_box">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="filter_box">
+                            <li>상세 조건 설정</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button class="btn_backnext bg_gray01">취소</button>
+                    <button class="btn_backnext bg_skyblue01">적용</button>
+                </div>
+            </div>
+            <div class="assol_content w75 lm1">
+                <button class="btn_grid">즉시가능</button>
+                <button class="btn_grid">조건부가능</button>
+                <button class="btn_grid">심사필요</button>
+                <button class="btn_grid">조건미달</button>
+                테이블 영역
+            </div>
+        </div>
+    </div>
+</body>
+</html>

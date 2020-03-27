@@ -1,0 +1,10 @@
+@import url("default.css");
+@import url("../../images");
+
+.employment_support_01 .filter_box.fb2 li > span{
+    width:140px;
+}
+.employment_support_01 .filter_box{
+    padding-top:20px;
+    padding-left:8px;
+}

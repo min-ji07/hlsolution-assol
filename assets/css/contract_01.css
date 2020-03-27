@@ -1,0 +1,26 @@
+@import url("default.css");
+@import url("../../images");
+
+.contract_01 .assol_content.w25 p{
+    margin-bottom:20px;
+}
+.contract_01 .assol_content.w25 p > label:first-child{
+    display:inline-block;
+    width:150px;
+    font-size:15px;
+    margin-left:5px;
+}
+.contract_01 .assol_content.w25 p input[type="text"]{
+    width:220px;
+    text-indent:7px;
+    border-color:#bfbfbf;
+}
+.contract_01 .assol_content.w25 p select{
+    border:0 none;
+    border-radius: 0;
+    border-bottom:1px solid #bfbfbf;
+    margin-right:5px;
+}
+.contract_01 .assol_content.w25 p select + input[type="text"]{
+    width:165px;
+}
